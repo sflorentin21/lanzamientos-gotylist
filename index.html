@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de Lanzamientos y GOTY</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        .nav-superior {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .btn-navegacion {
+            background-color: #333;
+            color: #ffffff;
+            border: 1px solid #444;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        .btn-navegacion:hover {
+            background-color: #4CAF50;
+            border-color: #4CAF50;
+        }
+        .filtros-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .filtro-grupo {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .filtro-grupo label {
+            font-size: 13px;
+            color: #ffb74d;
+            font-weight: bold;
+        }
+        .filtro-grupo select {
+            background-color: #1e1e1e;
+            color: #ffffff;
+            border: 1px solid #333;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            outline: none;
+            cursor: pointer;
+        }
+        .filtro-grupo select:hover {
+            border-color: #4CAF50;
+        }
+        .seccion-mes {
+            display: flex;
+            background-color: #181818;
+            border: 1px solid #333;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .columna-tiempo {
+            display: flex;
+            background-color: #262626;
+            border-right: 1px solid #333;
+        }
+        .caja-anio, .caja-mes {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 15px;
+            font-weight: bold;
+            font-size: 16px;
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+            text-align: center;
+        }
+        .caja-anio {
+            background-color: #2e2e2e;
+            color: #4CAF50;
+            border-right: 1px solid #333;
+        }
+        .caja-mes {
+            background-color: #222;
+            color: #ffb74d;
+        }
+        .grilla-juegos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .tarjeta-juego {
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .tarjeta-juego img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .info-juego {
+            padding: 12px;
+            text-align: center;
+        }
+        .info-juego h3 {
+            font-size: 14px;
+            margin: 0 0 8px 0;
+        }
+        .fecha {
+            background-color: #333;
+            color: #4CAF50;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 12px;
+            display: inline-block;
+            margin-bottom: 6px;
+        }
+        .plataformas {
+            background-color: #3a3a3a;
+            color: #ffffff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            display: block;
+            margin-top: 4px;
+        }
+        .sin-resultados {
+            text-align: center;
+            color: #888;
+            padding: 40px;
+            font-size: 16px;
+        }
+
+        /* ESTILOS ESPECÍFICOS PARA GOTY: 5 columnas exactas por fila */
+        .seccion-goty {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .grilla-goty {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+        .etiqueta-anio-goty {
+            background-color: #ffb74d;
+            color: #121212;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 13px;
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+        /* Estilo para el desarrollador debajo del año */
+        .desarrollador-goty {
+            background-color: #3a3a3a;
+            color: #ffffff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            display: block;
+            margin-top: 4px;
+        }
+
+        @media (max-width: 900px) {
+            .grilla-goty {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Calendario de Lanzamientos</h1>
+    
+    <div class="nav-superior">
+        <button class="btn-navegacion" onclick="cambiarVista('calendario')">📅 Calendario</button>
+        <button class="btn-navegacion" onclick="cambiarVista('goty')">🏆 GOTY List</button>
+    </div>
+
+    <div id="panel-filtros" class="filtros-container">
+        <div class="filtro-grupo">
+            <label for="filtro-anio">Año de Salida</label>
+            <select id="filtro-anio" onchange="renderizarCalendario()">
+                <option value="todos">Todos los años</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+            </select>
+        </div>
+        <div class="filtro-grupo">
+            <label for="filtro-plataforma">Plataforma</label>
+            <select id="filtro-plataforma" onchange="renderizarCalendario()">
+                <option value="todas">Todas las plataformas</option>
+                <option value="Steam">Steam</option>
+                <option value="PlayStation 5">PlayStation 5</option>
+                <option value="PlayStation 4">PlayStation 4</option>
+                <option value="Nintendo Switch">Nintendo Switch</option>
+                <option value="Nintendo Switch 2">Nintendo Switch 2</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="vista-contenido"></div>
+
+    <script>
+        const juegos = [
+            {
+                titulo: "Assassin's Creed Black Flag Resynced",
+                anio: "2026",
+                mes: "Julio",
+                fechaOrden: "2026-07-09",
+                fechaFormateada: "09/07/2026",
+                plataformas: "PlayStation 5, Steam",
+                imagen: "ac-black-flag.jpg" 
+            },
+            {
+                titulo: "Granblue Fantasy: Relink Endless Ragnarok",
+                anio: "2026",
+                mes: "Julio",
+                fechaOrden: "2026-07-09",
+                fechaFormateada: "09/07/2026",
+                plataformas: "PlayStation 4, PlayStation 5",
+                imagen: "granblue.jpg" 
+            },
+            {
+                titulo: "Halo Campaign Evolved",
+                anio: "2026",
+                mes: "Julio",
+                fechaOrden: "2026-07-28",
+                fechaFormateada: "28/07/2026",
+                plataformas: "Steam",
+                imagen: "halo.jpg" 
+            }
+        ];
+
+        // Lista GOTY desde el 2004 hasta el 2026 con desarrollador incluido
+        const listaGoty = [
+            { anio: "2004", titulo: "Grand Theft Auto: San Andreas", desarrollador: "Rockstar North", imagen: "halo.jpg" },
+            { anio: "2005", titulo: "Resident Evil 4", desarrollador: "Capcom", imagen: "halo.jpg" },
+            { anio: "2006", titulo: "The Legend of Zelda: Twilight Princess", desarrollador: "Nintendo EAD", imagen: "halo.jpg" },
+            { anio: "2007", titulo: "BioShock", desarrollador: "2K Boston", imagen: "halo.jpg" },
+            { anio: "2008", titulo: "Fallout 3", desarrollador: "Bethesda Game Studios", imagen: "halo.jpg" },
+            { anio: "2009", titulo: "Uncharted 2: Among Thieves", desarrollador: "Naughty Dog", imagen: "halo.jpg" },
+            { anio: "2010", titulo: "Red Dead Redemption", desarrollador: "Rockstar San Diego", imagen: "halo.jpg" },
+            { anio: "2011", titulo: "The Elder Scrolls V: Skyrim", desarrollador: "Bethesda Game Studios", imagen: "halo.jpg" },
+            { anio: "2012", titulo: "The Walking Dead", desarrollador: "Telltale Games", imagen: "halo.jpg" },
+            { anio: "2013", titulo: "Grand Theft Auto V", identifiers: "", desarrollador: "Rockstar North", imagen: "halo.jpg" },
+            { anio: "2014", titulo: "Dragon Age: Inquisition", desarrollador: "BioWare", imagen: "halo.jpg" },
+            { anio: "2015", titulo: "The Witcher 3: Wild Hunt", desarrollador: "CD Projekt Red", imagen: "halo.jpg" },
+            { anio: "2016", titulo: "Overwatch", desarrollador: "Blizzard Entertainment", imagen: "halo.jpg" },
+            { anio: "2017", titulo: "The Legend of Zelda: Breath of the Wild", desarrollador: "Nintendo EPD", imagen: "halo.jpg" },
+            { anio: "2018", titulo: "God of War", desarrollador: "Santa Monica Studio", imagen: "halo.jpg" },
+            { anio: "2019", titulo: "Sekiro: Shadows Die Twice", desarrollador: "FromSoftware", imagen: "halo.jpg" },
+            { anio: "2020", titulo: "The Last of Us Part II", desarrollador: "Naughty Dog", imagen: "halo.jpg" },
+            { anio: "2021", titulo: "It Takes Two", desarrollador: "Hazelight Studios", imagen: "halo.jpg" },
+            { anio: "2022", titulo: "Elden Ring", desarrollador: "FromSoftware", imagen: "halo.jpg" },
+            { anio: "2023", titulo: "Baldur's Gate 3", desarrollador: "Larian Studios", imagen: "halo.jpg" },
+            { anio: "2024", titulo: "Astro Bot", desarrollador: "Team Asobi", imagen: "halo.jpg" },
+            { anio: "2025", titulo: "Juego GOTY 2025", desarrollador: "Estudio 2025", imagen: "halo.jpg" },
+            { anio: "2026", titulo: "Juego GOTY 2026", desarrollador: "Estudio 2026", imagen: "halo.jpg" }
+        ];
+
+        let vistaActual = 'calendario';
+
+        function cambiarVista(vista) {
+            vistaActual = vista;
+            const panelFiltros = document.getElementById('panel-filtros');
+            
+            if (vistaActual === 'calendario') {
+                panelFiltros.style.display = 'flex';
+                renderizarCalendario();
+            } else {
+                panelFiltros.style.display = 'none';
+                renderizarGoty();
+            }
+        }
+
+        function renderizarCalendario() {
+            if (vistaActual !== 'calendario') return;
+            const contenedor = document.getElementById('vista-contenido');
+            contenedor.innerHTML = "";
+
+            const anioSeleccionado = document.getElementById('filtro-anio').value;
+            const plataformaSeleccionada = document.getElementById('filtro-plataforma').value;
+
+            const juegosFiltrados = juegos.filter(juego => {
+                const coincideAnio = (anioSeleccionado === "todos" || juego.anio === anioSeleccionado);
+                const coincidePlataforma = (plataformaSeleccionada === "todas" || juego.plataformas.includes(plataformaSeleccionada));
+                return coincideAnio && coincidePlataforma;
+            });
+
+            if (juegosFiltrados.length === 0) {
+                contenedor.innerHTML = `<div class="sin-resultados">No se encontraron juegos con los filtros seleccionados.</div>`;
+                return;
+            }
+
+            const grupos = {};
+            juegosFiltrados.forEach(juego => {
+                const clave = `${juego.anio}-${juego.mes}`;
+                if (!grupos[clave]) {
+                    grupos[clave] = { anio: juego.anio, mes: juego.mes, items: [] };
+                }
+                grupos[clave].items.push(juego);
+            });
+
+            for (let clave in grupos) {
+                const grupo = grupos[clave];
+                grupo.items.sort((a, b) => new Date(a.fechaOrden) - new Date(b.fechaOrden));
+
+                const seccionMes = document.createElement('div');
+                seccionMes.classList.add('seccion-mes');
+
+                const columnaTiempo = document.createElement('div');
+                columnaTiempo.classList.add('columna-tiempo');
+                columnaTiempo.innerHTML = `
+                    <div class="caja-anio">${grupo.anio}</div>
+                    <div class="caja-mes">${grupo.mes}</div>
+                `;
+                seccionMes.appendChild(columnaTiempo);
+
+                const grillaJuegos = document.createElement('div');
+                grillaJuegos.classList.add('grilla-juegos');
+
+                grupo.items.forEach(juego => {
+                    const tarjeta = document.createElement('div');
+                    tarjeta.classList.add('tarjeta-juego');
+                    tarjeta.innerHTML = `
+                        <img src="img/${juego.imagen}" alt="${juego.titulo}">
+                        <div class="info-juego">
+                            <h3>${juego.titulo}</h3>
+                            <div>
+                                <span class="fecha">${juego.fechaFormateada}</span>
+                                <span class="plataformas">${juego.plataformas}</span>
+                            </div>
+                        </div>
+                    `;
+                    grillaJuegos.appendChild(tarjeta);
+                });
+
+                seccionMes.appendChild(grillaJuegos);
+                contenedor.appendChild(seccionMes);
+            }
+        }
+
+        function renderizarGoty() {
+            if (vistaActual !== 'goty') return;
+            const contenedor = document.getElementById('vista-contenido');
+            contenedor.innerHTML = "";
+
+            // Ordenamos de forma ASCENDENTE (del año más antiguo 2004 al más reciente)
+            listaGoty.sort((a, b) => a.anio - b.anio);
+
+            const seccionGoty = document.createElement('div');
+            seccionGoty.classList.add('seccion-goty');
+
+            const grillaGoty = document.createElement('div');
+            grillaGoty.classList.add('grilla-goty');
+
+            listaGoty.forEach(goty => {
+                const tarjeta = document.createElement('div');
+                tarjeta.classList.add('tarjeta-juego');
+                tarjeta.innerHTML = `
+                    <img src="img/${goty.imagen}" alt="${goty.titulo}">
+                    <div class="info-juego">
+                        <h3>${goty.titulo}</h3>
+                        <div>
+                            <span class="etiqueta-anio-goty">GOTY ${goty.anio}</span>
+                            <span class="desarrollador-goty">${goty.desarrollador}</span>
+                        </div>
+                    </div>
+                `;
+                grillaGoty.appendChild(tarjeta);
+            });
+
+            seccionGoty.appendChild(grillaGoty);
+            contenedor.appendChild(seccionGoty);
+        }
+
+        cambiarVista('calendario');
+    </script>
+
+</body>
+</html>
