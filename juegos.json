@@ -305,6 +305,15 @@
       "fechaFormateada": "06/02/2026",
       "plataformas": "Steam",
       "imagen": "nioh3.avif"
+    },
+    {
+      "titulo": "Pokémon FireRed",
+      "anio": "2026",
+      "mes": "Febrero",
+      "fechaOrden": "2026-02-27",
+      "fechaFormateada": "27/02/2026",
+      "plataformas": "Nintendo Switch",
+      "imagen": "pokemon firered.jpg"
     }
   ],
   "goty": [
