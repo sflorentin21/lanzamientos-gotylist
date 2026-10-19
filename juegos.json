@@ -514,6 +514,12 @@
       "titulo": "Grand Theft Auto V",
       "desarrollador": "Rockstar Games",
       "imagen": "gta v.jpg"
+    },
+    {
+      "anio": "2008",
+      "titulo": "Grand Theft Auto IV",
+      "desarrollador": "Rockstar Games",
+      "imagen": "gta iv.jpg"
     }
   ]
 }
