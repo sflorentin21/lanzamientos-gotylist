@@ -35,6 +35,15 @@
       "fechaFormateada": "06/08/2026",
       "plataformas": "Steam",
       "imagen": "marvel tokon.avif"
+    },
+    {
+      "titulo": "Fire Emblem: Fortune's Weave",
+      "anio": "2026",
+      "mes": "Septiembre",
+      "fechaOrden": "2026-09-17",
+      "fechaFormateada": "17/09/2026",
+      "plataformas": "Steam",
+      "imagen": "fire emblem fortune weave.avif"
     }
   ],
   "goty": [
