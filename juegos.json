@@ -44,6 +44,15 @@
       "fechaFormateada": "17/09/2026",
       "plataformas": "Steam",
       "imagen": "fire emblem fortune weave.avif"
+    },
+    {
+      "titulo": "The Blood of Dawnwalker",
+      "anio": "2026",
+      "mes": "Septiembre",
+      "fechaOrden": "2026-09-03",
+      "fechaFormateada": "03/09/2026",
+      "plataformas": "Steam",
+      "imagen": "blood of dawnwalker.avif"
     }
   ],
   "goty": [
