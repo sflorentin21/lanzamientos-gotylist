@@ -62,6 +62,15 @@
       "fechaFormateada": "26/08/2026",
       "plataformas": "Steam",
       "imagen": "a plague tale resonance.avif"
+    },
+    {
+      "titulo": "Star Wars: Zero Company",
+      "anio": "2026",
+      "mes": "Agosto",
+      "fechaOrden": "2026-08-27",
+      "fechaFormateada": "27/08/2026",
+      "plataformas": "Steam",
+      "imagen": "star wars zero company.avif"
     }
   ],
   "goty": [
