@@ -568,6 +568,12 @@
       "titulo": "It Takes Two",
       "desarrollador": "Hazelight Studios",
       "imagen": "IT TAKES TWO.jpg"
+    },
+    {
+      "anio": "2022",
+      "titulo": "Elden Ring",
+      "desarrollador": "From Software",
+      "imagen": "elden ring.jpg"
     }
   ]
 }
