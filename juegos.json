@@ -431,6 +431,15 @@
       "fechaFormateada": "05/03/2027",
       "plataformas": "Steam",
       "imagen": "gundam rogue orbit.jpg"
+    },
+    {
+      "titulo": "Final Fantasy VII Revelation",
+      "anio": "2027",
+      "mes": "Abril",
+      "fechaOrden": "2027-04-08",
+      "fechaFormateada": "08/04/2027",
+      "plataformas": "Steam",
+      "imagen": "ff VII Revelation.jpg"
     }
   ],
   "goty": [
