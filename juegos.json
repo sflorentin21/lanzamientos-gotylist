@@ -242,6 +242,15 @@
       "fechaFormateada": "12/12/2026",
       "plataformas": "Steam",
       "imagen": "w40k dow iv.jpg"
+    },
+    {
+      "titulo": "Rayman Legends Retold",
+      "anio": "2026",
+      "mes": "Diciembre",
+      "fechaOrden": "2026-12-03",
+      "fechaFormateada": "03/12/2026",
+      "plataformas": "Steam",
+      "imagen": "rayman legends retold.avif"
     }
   ],
   "goty": [
