@@ -377,6 +377,15 @@
       "fechaFormateada": "04/02/2027",
       "plataformas": "Steam",
       "imagen": "metro 2039.avif"
+    },
+    {
+      "titulo": "Muramasa: Revenant Blades",
+      "anio": "2027",
+      "mes": "Febrero",
+      "fechaOrden": "2027-02-04",
+      "fechaFormateada": "04/02/2027",
+      "plataformas": "Steam, Nintendo Switch",
+      "imagen": "muramasa revenant blades.avif"
     }
   ],
   "goty": [
