@@ -556,6 +556,12 @@
       "titulo": "Sekiro - Shadows Die Twice",
       "desarrollador": "From Software",
       "imagen": "sekiro.jpg"
+    },
+    {
+      "anio": "2020",
+      "titulo": "The Last of Us - Part II",
+      "desarrollador": "Naughty Dog",
+      "imagen": "the last of us part ii.avif"
     }
   ]
 }
