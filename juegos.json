@@ -179,6 +179,15 @@
       "fechaFormateada": "15/10/2026",
       "plataformas": "Steam",
       "imagen": "castlevania - belmont curse.avif"
+    },
+    {
+      "titulo": "Metro 2033 Redux - Next Gen Update",
+      "anio": "2026",
+      "mes": "Octubre",
+      "fechaOrden": "2026-10-22",
+      "fechaFormateada": "22/10/2026",
+      "plataformas": "Steam",
+      "imagen": "metro 2033 next gen.jpg"
     }
   ],
   "goty": [
