@@ -80,6 +80,15 @@
       "fechaFormateada": "15/09/2026",
       "plataformas": "PlayStation 5",
       "imagen": "marvels wolverine.avif"
+    },
+    {
+      "titulo": "CONTROL Resonant",
+      "anio": "2026",
+      "mes": "Septiembre",
+      "fechaOrden": "2026-09-24",
+      "fechaFormateada": "24/09/2026",
+      "plataformas": "Steam",
+      "imagen": "control resonant.avif"
     }
   ],
   "goty": [
