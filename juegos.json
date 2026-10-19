@@ -161,6 +161,15 @@
       "fechaFormateada": "08/10/2026",
       "plataformas": "Steam",
       "imagen": "hellraiser - revival.avif"
+    },
+    {
+      "titulo": "Warhammer 40,000: Boltgun 2",
+      "anio": "2026",
+      "mes": "Octubre",
+      "fechaOrden": "2026-10-14",
+      "fechaFormateada": "14/10/2026",
+      "plataformas": "Steam",
+      "imagen": "w40k boltgun 2.png"
     }
   ],
   "goty": [
