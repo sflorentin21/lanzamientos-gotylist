@@ -224,6 +224,15 @@
       "fechaFormateada": "05/11/2026",
       "plataformas": "Nintendo Switch 2",
       "imagen": "zelda ocarina of time remake.jpg"
+    },
+    {
+      "titulo": "Grand Theft Auto VI",
+      "anio": "2026",
+      "mes": "Noviembre",
+      "fechaOrden": "2026-11-19",
+      "fechaFormateada": "19/11/2026",
+      "plataformas": "PlayStation 5",
+      "imagen": "grand theft auto vi.avif"
     }
   ],
   "goty": [
