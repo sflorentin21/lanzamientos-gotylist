@@ -422,6 +422,15 @@
       "fechaFormateada": "23/02/2027",
       "plataformas": "Steam",
       "imagen": "fable.avif"
+    },
+    {
+      "titulo": "Gundam - Rogue Orbit",
+      "anio": "2027",
+      "mes": "Marzo",
+      "fechaOrden": "2027-03-05",
+      "fechaFormateada": "05/03/2027",
+      "plataformas": "Steam",
+      "imagen": "gundam rogue orbit.jpg"
     }
   ],
   "goty": [
