@@ -134,6 +134,15 @@
       "fechaFormateada": "06/10/2026",
       "plataformas": "Steam",
       "imagen": "gears eday.jpg"
+    },
+    {
+      "titulo": "Gran Turismo 7 - Spec IV - Parte I",
+      "anio": "2026",
+      "mes": "Octubre",
+      "fechaOrden": "2026-10-15",
+      "fechaFormateada": "15/10/2026",
+      "plataformas": "PlayStation 5",
+      "imagen": "gt7 spec iv.jpeg"
     }
   ],
   "goty": [
