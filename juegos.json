@@ -586,6 +586,12 @@
       "titulo": "Astro Bot",
       "desarrollador": "Team Asobi",
       "imagen": "astrobot.avif"
+    },
+    {
+      "anio": "2025",
+      "titulo": "Calir Obscur: Expedition 33",
+      "desarrollador": "Sandfall Interactive",
+      "imagen": "clair obscure expedition 33.avif"
     }
   ]
 }
