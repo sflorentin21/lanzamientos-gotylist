@@ -472,6 +472,12 @@
       "titulo": "Resident Evil 4",
       "desarrollador": "Capcom",
       "imagen": "re4 2005.jpg"
+    },
+    {
+      "anio": "2006",
+      "titulo": "The Elder Scrolls - Oblivion",
+      "desarrollador": "Bethesda",
+      "imagen": "tes oblivion.jpg"
     }
   ]
 }
