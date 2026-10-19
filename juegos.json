@@ -350,6 +350,15 @@
       "fechaFormateada": "19/01/2027",
       "plataformas": "Steam",
       "imagen": "Titan Quest II.avif"
+    },
+    {
+      "titulo": "Until Dawn 2",
+      "anio": "2027",
+      "mes": "Enero",
+      "fechaOrden": "2027-01-28",
+      "fechaFormateada": "28/01/2027",
+      "plataformas": "PlayStation 5",
+      "imagen": "until dawn 2.avif"
     }
   ],
   "goty": [
