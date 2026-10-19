@@ -359,6 +359,15 @@
       "fechaFormateada": "28/01/2027",
       "plataformas": "PlayStation 5",
       "imagen": "until dawn 2.avif"
+    },
+    {
+      "titulo": "Metroid Ravenous",
+      "anio": "2027",
+      "mes": "Enero",
+      "fechaOrden": "2027-01-28",
+      "fechaFormateada": "28/01/2027",
+      "plataformas": "Nintendo Switch 2",
+      "imagen": "Metroid Ravenous.jpg"
     }
   ],
   "goty": [
