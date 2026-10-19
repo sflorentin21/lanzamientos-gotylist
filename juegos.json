@@ -278,6 +278,15 @@
       "fechaFormateada": "05/06/2026",
       "plataformas": "Steam",
       "imagen": "gothic1 remake.jpg"
+    },
+    {
+      "titulo": "The Adventures of Elliot: The Millennium Tales",
+      "anio": "2026",
+      "mes": "Junio",
+      "fechaOrden": "2026-06-18",
+      "fechaFormateada": "18/06/2026",
+      "plataformas": "Steam",
+      "imagen": "the adventures of elliot.avif"
     }
   ],
   "goty": [
