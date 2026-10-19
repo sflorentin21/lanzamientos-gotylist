@@ -287,6 +287,15 @@
       "fechaFormateada": "18/06/2026",
       "plataformas": "Steam",
       "imagen": "the adventures of elliot.avif"
+    },
+    {
+      "titulo": "Cult of the Lamb: Woolhaven",
+      "anio": "2026",
+      "mes": "Enero",
+      "fechaOrden": "2026-01-22",
+      "fechaFormateada": "22/01/2026",
+      "plataformas": "Steam",
+      "imagen": "cult of the lamb woolhaven.jpg"
     }
   ],
   "goty": [
