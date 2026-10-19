@@ -314,6 +314,15 @@
       "fechaFormateada": "27/02/2026",
       "plataformas": "Nintendo Switch",
       "imagen": "pokemon firered.jpg"
+    },
+    {
+      "titulo": "Pokémon LeafGreen",
+      "anio": "2026",
+      "mes": "Febrero",
+      "fechaOrden": "2026-02-27",
+      "fechaFormateada": "27/02/2026",
+      "plataformas": "Nintendo Switch",
+      "imagen": "pokemon leafgreen.jpg"
     }
   ],
   "goty": [
