@@ -332,6 +332,15 @@
       "fechaFormateada": "10/02/2026",
       "plataformas": "Steam",
       "imagen": "mewgenics.avif"
+    },
+    {
+      "titulo": "Resident Evil Requiem",
+      "anio": "2026",
+      "mes": "Febrero",
+      "fechaOrden": "2026-02-27",
+      "fechaFormateada": "27/02/2026",
+      "plataformas": "Steam",
+      "imagen": "rerequiem.jpg"
     }
   ],
   "goty": [
