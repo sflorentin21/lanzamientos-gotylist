@@ -502,6 +502,12 @@
       "titulo": "The Elder Scrolls - Skyrim",
       "desarrollador": "Bethesda",
       "imagen": "the elder scrolls v - skyrim.jpg"
+    },
+    {
+      "anio": "2012",
+      "titulo": "The Walking Dead",
+      "desarrollador": "Telltale Games",
+      "imagen": "the walking dead .jpg"
     }
   ]
 }
