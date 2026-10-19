@@ -386,6 +386,15 @@
       "fechaFormateada": "04/02/2027",
       "plataformas": "Steam, Nintendo Switch",
       "imagen": "muramasa revenant blades.avif"
+    },
+    {
+      "titulo": "Tomb Raider - Legacy of Atlantis",
+      "anio": "2027",
+      "mes": "Febrero",
+      "fechaOrden": "2027-02-12",
+      "fechaFormateada": "12/02/2027",
+      "plataformas": "Steam",
+      "imagen": "tomb raider atlantis.jpg"
     }
   ],
   "goty": [
