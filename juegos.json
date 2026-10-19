@@ -341,6 +341,15 @@
       "fechaFormateada": "27/02/2026",
       "plataformas": "Steam",
       "imagen": "rerequiem.jpg"
+    },
+    {
+      "titulo": "Titan Quest II",
+      "anio": "2027",
+      "mes": "Enero",
+      "fechaOrden": "2027-01-19",
+      "fechaFormateada": "19/01/2027",
+      "plataformas": "Steam",
+      "imagen": "Titan Quest II.avif"
     }
   ],
   "goty": [
