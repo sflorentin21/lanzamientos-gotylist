@@ -197,6 +197,15 @@
       "fechaFormateada": "22/10/2026",
       "plataformas": "Steam",
       "imagen": "metro ll next gen.jpg"
+    },
+    {
+      "titulo": "Final Fantasy Resonance",
+      "anio": "2026",
+      "mes": "Octubre",
+      "fechaOrden": "2026-10-22",
+      "fechaFormateada": "22/10/2026",
+      "plataformas": "Steam",
+      "imagen": "ff resonance.jpg"
     }
   ],
   "goty": [
