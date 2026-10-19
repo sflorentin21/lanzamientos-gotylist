@@ -368,6 +368,15 @@
       "fechaFormateada": "28/01/2027",
       "plataformas": "Nintendo Switch 2",
       "imagen": "Metroid Ravenous.jpg"
+    },
+    {
+      "titulo": "Metro 2039",
+      "anio": "2027",
+      "mes": "Febrero",
+      "fechaOrden": "2027-02-04",
+      "fechaFormateada": "04/02/2027",
+      "plataformas": "Steam",
+      "imagen": "Metro 2039"
     }
   ],
   "goty": [
