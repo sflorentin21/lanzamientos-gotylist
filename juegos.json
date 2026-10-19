@@ -574,6 +574,12 @@
       "titulo": "Elden Ring",
       "desarrollador": "From Software",
       "imagen": "elden ring.jpg"
+    },
+    {
+      "anio": "2023",
+      "titulo": "Baldurs Gate 3",
+      "desarrollador": "Larian Studios",
+      "imagen": "BALDURS GATE III.avif"
     }
   ]
 }
