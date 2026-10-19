@@ -53,6 +53,15 @@
       "fechaFormateada": "03/09/2026",
       "plataformas": "Steam",
       "imagen": "blood of dawnwalker.avif"
+    },
+    {
+      "titulo": "A Plague Tale - Resonance",
+      "anio": "2026",
+      "mes": "Agosto",
+      "fechaOrden": "2026-08-26",
+      "fechaFormateada": "26/08/2026",
+      "plataformas": "Steam",
+      "imagen": "a plague tale resonance.avif"
     }
   ],
   "goty": [
