@@ -508,6 +508,12 @@
       "titulo": "The Walking Dead",
       "desarrollador": "Telltale Games",
       "imagen": "the walking dead .jpg"
+    },
+    {
+      "anio": "2013",
+      "titulo": "Grand Theft Auto V",
+      "desarrollador": "Rockstar Games",
+      "imagen": "gta v.jpg"
     }
   ]
 }
