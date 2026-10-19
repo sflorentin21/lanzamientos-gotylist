@@ -413,6 +413,15 @@
       "fechaFormateada": "18/02/2027",
       "plataformas": "Steam",
       "imagen": "persona 4 revival.jpeg"
+    },
+    {
+      "titulo": "Fable ",
+      "anio": "2027",
+      "mes": "Febrero",
+      "fechaOrden": "2027-02-23",
+      "fechaFormateada": "23/02/2027",
+      "plataformas": "Steam",
+      "imagen": "fable.avif"
     }
   ],
   "goty": [
