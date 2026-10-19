@@ -496,6 +496,12 @@
       "titulo": "Red Dead Redemption",
       "desarrollador": "Rockstar Games",
       "imagen": "red dead redemption1 .avif"
+    },
+    {
+      "anio": "2011",
+      "titulo": "The Elder Scrolls - Skyrim",
+      "desarrollador": "Bethesda",
+      "imagen": "the elder scrolls v - skyrim.jpg"
     }
   ]
 }
