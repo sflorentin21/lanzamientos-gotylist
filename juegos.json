@@ -490,6 +490,12 @@
       "titulo": "Uncharted 2: Among Thieves",
       "desarrollador": "Naughty Dog",
       "imagen": "uncharted2.jpeg"
+    },
+    {
+      "anio": "2010",
+      "titulo": "Red Dead Redemption",
+      "desarrollador": "Rockstar Games",
+      "imagen": "red dead redemption1 .avif"
     }
   ]
 }
