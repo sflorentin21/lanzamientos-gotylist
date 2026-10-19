@@ -269,6 +269,15 @@
       "fechaFormateada": "15/01/2027",
       "plataformas": "Steam",
       "imagen": "stranger than heaven.jpg"
+    },
+    {
+      "titulo": "Gothic 1 Remake",
+      "anio": "2026",
+      "mes": "Junio",
+      "fechaOrden": "2026-06-05",
+      "fechaFormateada": "05/06/2026",
+      "plataformas": "Steam",
+      "imagen": "gothic1 remake.jpg"
     }
   ],
   "goty": [
