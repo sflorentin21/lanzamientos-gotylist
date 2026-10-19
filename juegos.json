@@ -580,6 +580,12 @@
       "titulo": "Baldurs Gate 3",
       "desarrollador": "Larian Studios",
       "imagen": "BALDURS GATE III.avif"
+    },
+    {
+      "anio": "2024",
+      "titulo": "Astro Bot",
+      "desarrollador": "Team Asobi",
+      "imagen": "astrobot.avif"
     }
   ]
 }
