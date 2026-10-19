@@ -538,6 +538,12 @@
       "titulo": "Overwatch",
       "desarrollador": "Blizzard",
       "imagen": "overwatch.jpg"
+    },
+    {
+      "anio": "2017",
+      "titulo": "The Legend of Zelda - Breath of The Wild",
+      "desarrollador": "Nintendo",
+      "imagen": "zelda botw res.jpg"
     }
   ]
 }
