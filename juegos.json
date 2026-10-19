@@ -395,6 +395,15 @@
       "fechaFormateada": "12/02/2027",
       "plataformas": "Steam",
       "imagen": "tomb raider atlantis.jpg"
+    },
+    {
+      "titulo": "God of War - Laufey",
+      "anio": "2027",
+      "mes": "Febrero",
+      "fechaOrden": "2027-02-16",
+      "fechaFormateada": "16/02/2027",
+      "plataformas": "PlayStation 5",
+      "imagen": "god of war laufey.jpeg"
     }
   ],
   "goty": [
