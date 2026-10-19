@@ -260,6 +260,15 @@
       "fechaFormateada": "11/12/2026",
       "plataformas": "Steam",
       "imagen": "path of exile 2.avif"
+    },
+    {
+      "titulo": "Stranger Than Heaven",
+      "anio": "2027",
+      "mes": "Enero",
+      "fechaOrden": "2027-01-15",
+      "fechaFormateada": "15/01/2027",
+      "plataformas": "Steam",
+      "imagen": "stranger than heaven.jpg"
     }
   ],
   "goty": [
