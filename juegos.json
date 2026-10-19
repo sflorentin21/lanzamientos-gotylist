@@ -520,6 +520,12 @@
       "titulo": "Grand Theft Auto IV",
       "desarrollador": "Rockstar Games",
       "imagen": "gta iv.jpg"
+    },
+    {
+      "anio": "2014",
+      "titulo": "Dragon Age - Inquisition",
+      "desarrollador": "Bioware",
+      "imagen": "DRAGON AGE INQUISITION.avif"
     }
   ]
 }
