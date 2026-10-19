@@ -449,6 +449,15 @@
       "fechaFormateada": "22/04/2027",
       "plataformas": "Steam",
       "imagen": "melty blood lumina.avif"
+    },
+    {
+      "titulo": "Shroom and Gloom",
+      "anio": "2026",
+      "mes": "Septiembre",
+      "fechaOrden": "2026-09-10",
+      "fechaFormateada": "10/09/2026",
+      "plataformas": "Steam",
+      "imagen": "shroomngloom.jpg"
     }
   ],
   "goty": [
