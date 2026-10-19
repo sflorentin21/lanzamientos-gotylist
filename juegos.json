@@ -116,6 +116,15 @@
       "fechaFormateada": "29/09/2026",
       "plataformas": "Steam",
       "imagen": "tw3 remastered.jpg"
+    },
+    {
+      "titulo": "Ace Combat 8: Wings of Theve",
+      "anio": "2026",
+      "mes": "Octubre",
+      "fechaOrden": "2026-10-02",
+      "fechaFormateada": "02/10/2026",
+      "plataformas": "Steam",
+      "imagen": "ace combat - wings of theve.jpg"
     }
   ],
   "goty": [
