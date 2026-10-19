@@ -215,6 +215,15 @@
       "fechaFormateada": "29/10/2026",
       "plataformas": "Steam",
       "imagen": "wolf among us remastered.jpg"
+    },
+    {
+      "titulo": "The Legend of Zelda: Ocarina of Time",
+      "anio": "2026",
+      "mes": "Noviembre",
+      "fechaOrden": "2026-11-05",
+      "fechaFormateada": "05/11/2026",
+      "plataformas": "Nintendo Switch 2",
+      "imagen": "zelda ocarina of time remake.jpg"
     }
   ],
   "goty": [
