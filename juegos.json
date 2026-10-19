@@ -296,6 +296,15 @@
       "fechaFormateada": "22/01/2026",
       "plataformas": "Steam",
       "imagen": "cult of the lamb woolhaven.jpg"
+    },
+    {
+      "titulo": "Nioh 3",
+      "anio": "2026",
+      "mes": "Febrero",
+      "fechaOrden": "2026-02-06",
+      "fechaFormateada": "06/02/2026",
+      "plataformas": "Steam",
+      "imagen": "nioh3.avif"
     }
   ],
   "goty": [
