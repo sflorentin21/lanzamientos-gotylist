@@ -152,6 +152,15 @@
       "fechaFormateada": "06/10/2026",
       "plataformas": "Steam",
       "imagen": "dargons dogma ii dark arisen.avif"
+    },
+    {
+      "titulo": "Clive Barker's Hellraiser: Revival",
+      "anio": "2026",
+      "mes": "Octubre",
+      "fechaOrden": "2026-10-08",
+      "fechaFormateada": "08/10/2026",
+      "plataformas": "Steam",
+      "imagen": "hellraiser - revival.avif"
     }
   ],
   "goty": [
