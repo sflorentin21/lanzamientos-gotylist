@@ -206,6 +206,15 @@
       "fechaFormateada": "22/10/2026",
       "plataformas": "Steam",
       "imagen": "ff resonance.jpg"
+    },
+    {
+      "titulo": "The Wolf Among Us: Remastered",
+      "anio": "2026",
+      "mes": "Octubre",
+      "fechaOrden": "2026-10-29",
+      "fechaFormateada": "29/10/2026",
+      "plataformas": "Steam",
+      "imagen": "wolf among us remastered.jpg"
     }
   ],
   "goty": [
