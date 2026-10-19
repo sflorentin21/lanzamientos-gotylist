@@ -550,6 +550,12 @@
       "titulo": "God of War",
       "desarrollador": "Sony Santa Monica",
       "imagen": "gow 2018.jpg"
+    },
+    {
+      "anio": "2019",
+      "titulo": "Sekiro - Shadows Die Twice",
+      "desarrollador": "From Software",
+      "imagen": "sekiro.jpg"
     }
   ]
 }
