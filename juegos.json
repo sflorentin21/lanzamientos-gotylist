@@ -26,6 +26,15 @@
       "fechaFormateada": "28/07/2026",
       "plataformas": "Steam",
       "imagen": "halo campaign evolved res.jpg"
+    },
+    {
+      "titulo": "MARVEL Tōkon: Fighting Souls",
+      "anio": "2026",
+      "mes": "Agosto",
+      "fechaOrden": "2026-08-06",
+      "fechaFormateada": "06/08/2026",
+      "plataformas": "Steam",
+      "imagen": "marvel tokon.avif"
     }
   ],
   "goty": [
