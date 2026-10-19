@@ -1,1 +1,45 @@
-
+{
+  "calendario": [
+    {
+      "titulo": "Assassin's Creed Black Flag Resynced",
+      "anio": "2026",
+      "mes": "Julio",
+      "fechaOrden": "2026-07-09",
+      "fechaFormateada": "09/07/2026",
+      "plataformas": "PlayStation 5, Steam",
+      "imagen": "ac-black-flag.jpg"
+    },
+    {
+      "titulo": "Granblue Fantasy: Relink Endless Ragnarok",
+      "anio": "2026",
+      "mes": "Julio",
+      "fechaOrden": "2026-07-09",
+      "fechaFormateada": "09/07/2026",
+      "plataformas": "PlayStation 4, PlayStation 5",
+      "imagen": "granblue.jpg"
+    },
+    {
+      "titulo": "Halo Campaign Evolved",
+      "anio": "2026",
+      "mes": "Julio",
+      "fechaOrden": "2026-07-28",
+      "fechaFormateada": "28/07/2026",
+      "plataformas": "Steam",
+      "imagen": "halo.jpg"
+    }
+  ],
+  "goty": [
+    {
+      "anio": "2004",
+      "titulo": "Grand Theft Auto: San Andreas",
+      "desarrollador": "Rockstar North",
+      "imagen": "halo.jpg"
+    },
+    {
+      "anio": "2005",
+      "titulo": "Resident Evil 4",
+      "desarrollador": "Capcom",
+      "imagen": "halo.jpg"
+    }
+  ]
+}
