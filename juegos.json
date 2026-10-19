@@ -440,6 +440,15 @@
       "fechaFormateada": "08/04/2027",
       "plataformas": "Steam",
       "imagen": "ff VII Revelation.jpg"
+    },
+    {
+      "titulo": "Melty Blood: Twi-Lumina",
+      "anio": "2027",
+      "mes": "Abril",
+      "fechaOrden": "2027-04-22",
+      "fechaFormateada": "22/04/2027",
+      "plataformas": "Steam",
+      "imagen": "melty blood lumina.avif"
     }
   ],
   "goty": [
