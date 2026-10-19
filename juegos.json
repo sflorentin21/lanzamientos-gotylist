@@ -170,6 +170,15 @@
       "fechaFormateada": "14/10/2026",
       "plataformas": "Steam",
       "imagen": "w40k boltgun 2.png"
+    },
+    {
+      "titulo": "Castlevania: Belmont's Curse",
+      "anio": "2026",
+      "mes": "Octubre",
+      "fechaOrden": "2026-10-15",
+      "fechaFormateada": "15/10/2026",
+      "plataformas": "Steam",
+      "imagen": "castlevania - belmont curse.avif"
     }
   ],
   "goty": [
