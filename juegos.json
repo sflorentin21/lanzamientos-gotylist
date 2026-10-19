@@ -107,6 +107,15 @@
       "fechaFormateada": "25/09/2026",
       "plataformas": "Steam",
       "imagen": "onimusha way of the sword.avif"
+    },
+    {
+      "titulo": "The Witcher 3: Wild Hunt - Remastered",
+      "anio": "2026",
+      "mes": "Septiembre",
+      "fechaOrden": "2026-09-29",
+      "fechaFormateada": "29/09/2026",
+      "plataformas": "Steam",
+      "imagen": "tw3 remastered.jpg"
     }
   ],
   "goty": [
