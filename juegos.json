@@ -478,6 +478,12 @@
       "titulo": "The Elder Scrolls - Oblivion",
       "desarrollador": "Bethesda",
       "imagen": "tes oblivion.jpg"
+    },
+    {
+      "anio": "2007",
+      "titulo": "Bioshock",
+      "desarrollador": "2K",
+      "imagen": "bioshock.jpg"
     }
   ]
 }
