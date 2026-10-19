@@ -484,6 +484,12 @@
       "titulo": "Bioshock",
       "desarrollador": "2K",
       "imagen": "bioshock.jpg"
+    },
+    {
+      "anio": "2009",
+      "titulo": "Uncharted 2: Among Thieves",
+      "desarrollador": "Naughty Dog",
+      "imagen": "uncharted2.jpeg"
     }
   ]
 }
