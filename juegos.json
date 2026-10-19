@@ -251,6 +251,15 @@
       "fechaFormateada": "03/12/2026",
       "plataformas": "Steam",
       "imagen": "rayman legends retold.avif"
+    },
+    {
+      "titulo": "Path of Exile II",
+      "anio": "2026",
+      "mes": "Diciembre",
+      "fechaOrden": "2026-12-11",
+      "fechaFormateada": "11/12/2026",
+      "plataformas": "Steam",
+      "imagen": "Path of Exile II "
     }
   ],
   "goty": [
