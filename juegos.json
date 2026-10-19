@@ -323,6 +323,15 @@
       "fechaFormateada": "27/02/2026",
       "plataformas": "Nintendo Switch",
       "imagen": "pokemon leafgreen.jpg"
+    },
+    {
+      "titulo": "Mewgenics",
+      "anio": "2026",
+      "mes": "Febrero",
+      "fechaOrden": "2026-02-10",
+      "fechaFormateada": "10/02/2026",
+      "plataformas": "Steam",
+      "imagen": "mewgenics.avif"
     }
   ],
   "goty": [
