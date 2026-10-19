@@ -544,6 +544,12 @@
       "titulo": "The Legend of Zelda - Breath of The Wild",
       "desarrollador": "Nintendo",
       "imagen": "zelda botw res.jpg"
+    },
+    {
+      "anio": "2018",
+      "titulo": "God of War",
+      "desarrollador": "Sony Santa Monica",
+      "imagen": "gow 2018.jpg"
     }
   ]
 }
