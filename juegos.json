@@ -125,6 +125,15 @@
       "fechaFormateada": "02/10/2026",
       "plataformas": "Steam",
       "imagen": "ace combat - wings of theve.jpg"
+    },
+    {
+      "titulo": "Gears of War: E-Day",
+      "anio": "2026",
+      "mes": "Octubre",
+      "fechaOrden": "2026-10-06",
+      "fechaFormateada": "06/10/2026",
+      "plataformas": "Steam",
+      "imagen": "gears eday.jpg"
     }
   ],
   "goty": [
