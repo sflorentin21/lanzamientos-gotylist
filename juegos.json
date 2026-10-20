@@ -669,6 +669,16 @@
       "plataformas": "Steam",
       "desarrollador": "Square Enix",
       "imagen": "octopath traveler 0.jpg"
+    },
+    {
+      "titulo": "Terminator 2D: NO FATE",
+      "anio": "2025",
+      "mes": "Diciembre",
+      "fechaOrden": "2025-12-12",
+      "fechaFormateada": "12/12/2025",
+      "plataformas": "Steam",
+      "desarrollador": "Bitmap Bureau",
+      "imagen": "terminator 2d no fate.avif"
     }
   ],
   "goty": [
