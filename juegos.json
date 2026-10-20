@@ -548,6 +548,15 @@
       "fechaFormateada": "30/04/2026",
       "plataformas": "Steam",
       "imagen": "invincible vs.avif"
+    },
+    {
+      "titulo": "Pragmata",
+      "anio": "2026",
+      "mes": "Octubre",
+      "fechaOrden": "2026-10-16",
+      "fechaFormateada": "16/10/2026",
+      "plataformas": "Steam",
+      "imagen": "pragmata.avif"
     }
   ],
   "goty": [
