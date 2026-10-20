@@ -679,6 +679,16 @@
       "plataformas": "Steam",
       "desarrollador": "Bitmap Bureau",
       "imagen": "terminator 2d no fate.avif"
+    },
+    {
+      "titulo": "Moonlighter 2: The Endless Vault",
+      "anio": "2026",
+      "mes": "Septiembre",
+      "fechaOrden": "2026-09-02",
+      "fechaFormateada": "02/09/2026",
+      "plataformas": "Steam",
+      "desarrollador": "Digital Sun",
+      "imagen": "moonlighter 2.jpg"
     }
   ],
   "goty": [
