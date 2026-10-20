@@ -521,6 +521,15 @@
       "fechaFormateada": "05/03/2026",
       "plataformas": "Steam",
       "imagen": "slay the spire II.jpg"
+    },
+    {
+      "titulo": "Death Stranding 2",
+      "anio": "2026",
+      "mes": "Marzo",
+      "fechaOrden": "2026-03-19",
+      "fechaFormateada": "19/03/2026",
+      "plataformas": "Steam",
+      "imagen": "death stranding 2.jpg"
     }
   ],
   "goty": [
