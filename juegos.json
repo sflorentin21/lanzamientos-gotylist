@@ -709,6 +709,16 @@
       "plataformas": "PlayStation 5",
       "desarrollador": "Sucker Punch",
       "imagen": "ghost of yotei.jpg"
+    },
+    {
+      "titulo": "Digimon Story Time Stranger",
+      "anio": "2025",
+      "mes": "Octubre",
+      "fechaOrden": "2025-10-03",
+      "fechaFormateada": "03/10/2025",
+      "plataformas": "Steam",
+      "desarrollador": "Media.Vision Inc.",
+      "imagen": "digimon story time stranger.avif"
     }
   ],
   "goty": [
