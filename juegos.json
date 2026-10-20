@@ -485,6 +485,15 @@
       "fechaFormateada": "27/05/2026",
       "plataformas": "Steam",
       "imagen": "007 first light.png"
+    },
+    {
+      "titulo": "Forza Horizon 6",
+      "anio": "2026",
+      "mes": "Mayo",
+      "fechaOrden": "2026-05-19",
+      "fechaFormateada": "19/05/2026",
+      "plataformas": "Steam",
+      "imagen": "forza horizon 6.png"
     }
   ],
   "goty": [
