@@ -539,6 +539,15 @@
       "fechaFormateada": "28/04/2026",
       "plataformas": "Steam",
       "imagen": "diablo 4 lord of hatred.jpg"
+    },
+    {
+      "titulo": "Invincible VS",
+      "anio": "2026",
+      "mes": "Abril",
+      "fechaOrden": "2026-04-30",
+      "fechaFormateada": "30/04/2026",
+      "plataformas": "Steam",
+      "imagen": "invincible vs.avif"
     }
   ],
   "goty": [
