@@ -618,6 +618,16 @@
       "plataformas": "Steam",
       "desarrollador": "Saibot Studios",
       "imagen": "tenebris somnia.jpg"
+    },
+    {
+      "titulo": "Warhammer Survivors",
+      "anio": "2026",
+      "mes": "Noviembre",
+      "fechaOrden": "2026-11-10",
+      "fechaFormateada": "10/11/2026",
+      "plataformas": "Steam",
+      "desarrollador": "Auroch Digital",
+      "imagen": "warhammer-survivors.jpg"
     }
   ],
   "goty": [
