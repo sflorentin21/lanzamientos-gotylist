@@ -689,6 +689,16 @@
       "plataformas": "Steam",
       "desarrollador": "Digital Sun",
       "imagen": "moonlighter 2.jpg"
+    },
+    {
+      "titulo": "Constance",
+      "anio": "2025",
+      "mes": "Noviembre",
+      "fechaOrden": "2025-11-26",
+      "fechaFormateada": "26/11/2025",
+      "plataformas": "Steam",
+      "desarrollador": "btf",
+      "imagen": "Constance "
     }
   ],
   "goty": [
