@@ -512,6 +512,15 @@
       "fechaFormateada": "03/03/2026",
       "plataformas": "Steam",
       "imagen": "legacy of kain defiance remastered.jpg"
+    },
+    {
+      "titulo": "Slay the Spire 2 (Early Access)",
+      "anio": "2026",
+      "mes": "Marzo",
+      "fechaOrden": "2026-03-05",
+      "fechaFormateada": "05/03/2026",
+      "plataformas": "Steam",
+      "imagen": "slay the spire II.jpg"
     }
   ],
   "goty": [
