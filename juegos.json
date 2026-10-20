@@ -530,6 +530,15 @@
       "fechaFormateada": "19/03/2026",
       "plataformas": "Steam",
       "imagen": "death stranding 2.jpg"
+    },
+    {
+      "titulo": "Diablo 4: Lord of Hatred",
+      "anio": "2026",
+      "mes": "Abril",
+      "fechaOrden": "2026-04-28",
+      "fechaFormateada": "28/04/2026",
+      "plataformas": "Steam",
+      "imagen": "diablo 4 lord of hatred.jpg"
     }
   ],
   "goty": [
