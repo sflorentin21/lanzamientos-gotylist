@@ -476,6 +476,15 @@
       "fechaFormateada": "29/05/2026",
       "plataformas": "Steam",
       "imagen": "mina the hollower.jpg"
+    },
+    {
+      "titulo": "007 First Light",
+      "anio": "2026",
+      "mes": "Mayo",
+      "fechaOrden": "2026-05-27",
+      "fechaFormateada": "27/05/2026",
+      "plataformas": "Steam",
+      "imagen": "007 first light.png"
     }
   ],
   "goty": [
