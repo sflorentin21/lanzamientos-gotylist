@@ -578,6 +578,16 @@
       "plataformas": "Steam; Xbox Series X|S",
       "desarrollador": "MAGES. Inc.",
       "imagen": "steinsgatereboot.jpg"
+    },
+    {
+      "titulo": "Metal Gear Solid: Master Collection Vol. 2 ",
+      "anio": "2026",
+      "mes": "Agosto",
+      "fechaOrden": "2026-08-27",
+      "fechaFormateada": "27/08/2026",
+      "plataformas": "Steam",
+      "desarrollador": "Konami",
+      "imagen": "metal gear solid master collection vol2.avif"
     }
   ],
   "goty": [
