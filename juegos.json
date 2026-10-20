@@ -649,6 +649,16 @@
       "plataformas": "Steam",
       "desarrollador": "Dotemu",
       "imagen": "marvel-cosmic-invasion.jpg"
+    },
+    {
+      "titulo": "Metroid Prime 4: Beyond",
+      "anio": "2025",
+      "mes": "Diciembre",
+      "fechaOrden": "2025-12-04",
+      "fechaFormateada": "04/12/2025",
+      "plataformas": "Nintendo Switch, Nintendo Switch 2",
+      "desarrollador": "Nintendo",
+      "imagen": "metroid prime 4 beyond.png"
     }
   ],
   "goty": [
