@@ -467,6 +467,15 @@
       "fechaFormateada": "12/03/2026",
       "plataformas": "Steam",
       "imagen": "mh stories 3.avif"
+    },
+    {
+      "titulo": "Mina the Hollower",
+      "anio": "2026",
+      "mes": "Mayo",
+      "fechaOrden": "2026-05-29",
+      "fechaFormateada": "29/05/2026",
+      "plataformas": "Steam",
+      "imagen": "mina the hollower.jpg"
     }
   ],
   "goty": [
