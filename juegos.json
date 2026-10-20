@@ -608,6 +608,16 @@
       "plataformas": "Steam",
       "desarrollador": "Fuse Games",
       "imagen": "star wars galactic racers.avif"
+    },
+    {
+      "titulo": "Tenebris Somnia",
+      "anio": "2026",
+      "mes": "Octubre",
+      "fechaOrden": "2026-10-16",
+      "fechaFormateada": "16/10/2026",
+      "plataformas": "Steam",
+      "desarrollador": "Saibot Studios",
+      "imagen": "tenebris somnia.jpg"
     }
   ],
   "goty": [
