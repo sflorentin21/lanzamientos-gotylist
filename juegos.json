@@ -588,6 +588,16 @@
       "plataformas": "Steam",
       "desarrollador": "Konami",
       "imagen": "metal gear solid master collection vol2.avif"
+    },
+    {
+      "titulo": "Silent Hill: Townfall",
+      "anio": "2026",
+      "mes": "Septiembre",
+      "fechaOrden": "2026-09-24",
+      "fechaFormateada": "24/09/2026",
+      "plataformas": "Steam",
+      "desarrollador": "Konami",
+      "imagen": "silent hill townfall.avif"
     }
   ],
   "goty": [
