@@ -458,6 +458,15 @@
       "fechaFormateada": "10/09/2026",
       "plataformas": "Steam",
       "imagen": "shroomngloom.jpg"
+    },
+    {
+      "titulo": "Monster Hunter Stories 3",
+      "anio": "2026",
+      "mes": "Marzo",
+      "fechaOrden": "2026-03-12",
+      "fechaFormateada": "12/03/2026",
+      "plataformas": "Steam",
+      "imagen": "mh stories 3.avif"
     }
   ],
   "goty": [
