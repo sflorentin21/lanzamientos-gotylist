@@ -639,6 +639,16 @@
       "plataformas": "Steam",
       "desarrollador": "Auroch Digital",
       "imagen": "warhammer-survivors.jpg"
+    },
+    {
+      "titulo": "MARVEL Cosmic Invasion",
+      "anio": "2025",
+      "mes": "Diciembre",
+      "fechaOrden": "2025-12-01",
+      "fechaFormateada": "01/12/2025",
+      "plataformas": "Steam",
+      "desarrollador": "Dotemu",
+      "imagen": "marvel-cosmic-invasion.jpg"
     }
   ],
   "goty": [
