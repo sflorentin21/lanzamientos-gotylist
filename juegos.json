@@ -699,6 +699,16 @@
       "plataformas": "Steam",
       "desarrollador": "btf",
       "imagen": "Constance "
+    },
+    {
+      "titulo": "Ghost of Yōtei",
+      "anio": "2025",
+      "mes": "Octubre",
+      "fechaOrden": "2025-10-02",
+      "fechaFormateada": "02/10/2025",
+      "plataformas": "PlayStation 5",
+      "desarrollador": "Sucker Punch",
+      "imagen": "ghost of yotei.jpg"
     }
   ],
   "goty": [
