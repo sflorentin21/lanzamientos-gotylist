@@ -557,6 +557,15 @@
       "fechaFormateada": "16/04/2026",
       "plataformas": "Steam",
       "imagen": "pragmata.avif"
+    },
+    {
+      "titulo": "Heroes of Might and Magic: Olden Era (Early Access)",
+      "anio": "2026",
+      "mes": "Abril",
+      "fechaOrden": "2026-04-30",
+      "fechaFormateada": "30/04/2026",
+      "plataformas": "Steam",
+      "imagen": "heroes of might and magic olden era.avif"
     }
   ],
   "goty": [
