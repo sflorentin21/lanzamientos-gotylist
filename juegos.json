@@ -719,6 +719,16 @@
       "plataformas": "Steam",
       "desarrollador": "Media.Vision Inc.",
       "imagen": "digimon story time stranger.avif"
+    },
+    {
+      "titulo": "No Rest for the Wicked",
+      "anio": "2027",
+      "mes": "Marzo",
+      "fechaOrden": "2027-03-01",
+      "fechaFormateada": "01/03/2027",
+      "plataformas": "Steam",
+      "desarrollador": "Moon Studios",
+      "imagen": "no rest for the wicked.jpg"
     }
   ],
   "goty": [
