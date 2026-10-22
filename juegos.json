@@ -729,6 +729,16 @@
       "plataformas": "Steam",
       "desarrollador": "Moon Studios",
       "imagen": "no rest for the wicked.jpg"
+    },
+    {
+      "titulo": "Phantom Blade 0",
+      "anio": "2026",
+      "mes": "Octubre",
+      "fechaOrden": "2026-10-29",
+      "fechaFormateada": "29/10/2026",
+      "plataformas": "PlayStation 5, Steam",
+      "desarrollador": "S-GAME",
+      "imagen": "phantom blade 0.avif"
     }
   ],
   "goty": [
