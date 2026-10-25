@@ -759,6 +759,16 @@
       "plataformas": "Steam",
       "desarrollador": "The Game Kitchen",
       "imagen": "ninja gaiden ragebound.avif"
+    },
+    {
+      "titulo": "Mortal Shell II",
+      "anio": "2026",
+      "mes": "Agosto",
+      "fechaOrden": "2026-08-20",
+      "fechaFormateada": "20/08/2026",
+      "plataformas": "Steam",
+      "desarrollador": "Cold Symmetry",
+      "imagen": "mortal shell II.avif"
     }
   ],
   "goty": [
