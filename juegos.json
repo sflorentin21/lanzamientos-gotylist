@@ -769,18 +769,19 @@
       "plataformas": "Steam",
       "desarrollador": "Cold Symmetry",
       "imagen": "mortal shell II.avif"
-    }
-  ],
-  "tbd": [
+    },
     {
       "titulo": "The Expanse: Osiris Reborn",
-      "anio": "2027",
-      "fechaFormateada": "Por Anunciar",
+      "anio": "2026",
+      "mes": "Octubre",
+      "fechaOrden": "2026-10-25",
+      "fechaFormateada": "25/10/2026",
       "plataformas": "Steam",
       "desarrollador": "Owlcat Games",
       "imagen": "the expanse osiris reborn.jpg"
     }
   ],
+  "tbd": [],
   "goty": [
     {
       "anio": "2004",
