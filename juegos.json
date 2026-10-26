@@ -789,6 +789,16 @@
       "plataformas": "Epic",
       "desarrollador": "Remedy Entertainment",
       "imagen": "alanwakeii.jpg"
+    },
+    {
+      "titulo": "Kingdom Come: Deliverance II",
+      "anio": "2025",
+      "mes": "Febrero",
+      "fechaOrden": "2025-02-04",
+      "fechaFormateada": "04/02/2025",
+      "plataformas": "Steam",
+      "desarrollador": "Warhorse Studios",
+      "imagen": "kingdomcomeii.jpg"
     }
   ],
   "tbd": [
