@@ -819,6 +819,16 @@
       "plataformas": "Steam",
       "desarrollador": "Game Freak",
       "imagen": "beastofreincarnation.jpg"
+    },
+    {
+      "titulo": "The Sinking City 2",
+      "anio": "2026",
+      "mes": "Agosto",
+      "fechaOrden": "2026-08-18",
+      "fechaFormateada": "18/08/2026",
+      "plataformas": "Steam",
+      "desarrollador": "Frogwares",
+      "imagen": "thesinkingcityii.jpg"
     }
   ],
   "tbd": [
