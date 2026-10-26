@@ -799,6 +799,16 @@
       "plataformas": "Steam",
       "desarrollador": "Warhorse Studios",
       "imagen": "kingdomcomeii.jpg"
+    },
+    {
+      "titulo": "Valor Mortis",
+      "anio": "2026",
+      "mes": "Octubre",
+      "fechaOrden": "2026-10-13",
+      "fechaFormateada": "13/10/2026",
+      "plataformas": "Steam",
+      "desarrollador": "One More Level",
+      "imagen": "valormortis.jpg"
     }
   ],
   "tbd": [
