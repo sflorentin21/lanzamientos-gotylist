@@ -769,6 +769,16 @@
       "plataformas": "Steam",
       "desarrollador": "Cold Symmetry",
       "imagen": "mortal shell II.avif"
+    },
+    {
+      "titulo": "Silver Pines",
+      "anio": "2026",
+      "mes": "Octubre",
+      "fechaOrden": "2026-10-08",
+      "fechaFormateada": "08/10/2026",
+      "plataformas": "Steam",
+      "desarrollador": "Wych Elm Games",
+      "imagen": "silver pines.png"
     }
   ],
   "tbd": [
