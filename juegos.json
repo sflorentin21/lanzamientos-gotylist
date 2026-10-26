@@ -809,6 +809,16 @@
       "plataformas": "Steam",
       "desarrollador": "One More Level",
       "imagen": "valormortis.jpg"
+    },
+    {
+      "titulo": "Beast of Reincarnation",
+      "anio": "2026",
+      "mes": "Octubre",
+      "fechaOrden": "2026-10-04",
+      "fechaFormateada": "04/10/2026",
+      "plataformas": "Steam",
+      "desarrollador": "Game Freak",
+      "imagen": "beastofreincarnation.jpg"
     }
   ],
   "tbd": [
