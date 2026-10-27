@@ -830,6 +830,16 @@
       "plataformas": "Steam",
       "desarrollador": "Frogwares",
       "imagen": "thesinkingcityii.jpg"
+    },
+    {
+      "titulo": "Saros",
+      "anio": "2026",
+      "mes": "Abril",
+      "fechaOrden": "2026-04-30",
+      "fechaFormateada": "30/04/2026",
+      "plataformas": "PlayStation 5",
+      "desarrollador": "Housemarque",
+      "imagen": "saros.jpg"
     }
   ],
   "tbd": [
