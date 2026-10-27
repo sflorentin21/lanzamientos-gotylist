@@ -846,6 +846,16 @@
       "plataformas": "PlayStation 5",
       "desarrollador": "Housemarque",
       "imagen": "saros.jpg"
+    },
+    {
+      "titulo": "Eternal Anima",
+      "anio": "2027",
+      "mes": "Marzo",
+      "fechaOrden": "2027-03-04",
+      "fechaFormateada": "04/03/2027",
+      "plataformas": "Steam",
+      "desarrollador": "Marvelous Inc.",
+      "imagen": "eternal-anima.jpg"
     }
   ],
   "tbd": [
