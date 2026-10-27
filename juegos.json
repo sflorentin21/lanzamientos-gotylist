@@ -856,6 +856,16 @@
       "plataformas": "Steam",
       "desarrollador": "Marvelous Inc.",
       "imagen": "eternal-anima.jpg"
+    },
+    {
+      "titulo": "Trails in the Sky 1st Chapter",
+      "anio": "2025",
+      "mes": "Septiembre",
+      "fechaOrden": "2025-09-19",
+      "fechaFormateada": "19/09/2025",
+      "plataformas": "Steam",
+      "desarrollador": "Nihon Falcom",
+      "imagen": "trials in the sky 1st chapter.jpg"
     }
   ],
   "tbd": [
