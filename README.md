@@ -10,3 +10,5 @@ etiqueta desarrollador
 
 se modifica:
 color fuentes
+
+ultima versión 2.5 ------26/10/26
