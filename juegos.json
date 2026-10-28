@@ -997,6 +997,16 @@
       "plataformas": "Steam",
       "desarrollador": "Capcom",
       "imagen": "resident evil 6.jpg"
+    },
+    {
+      "titulo": "Resident Evil 3: Nemesis",
+      "anio": "1999",
+      "mes": "Noviembre",
+      "fechaOrden": "1999-11-11",
+      "fechaFormateada": "11/11/1999",
+      "plataformas": "PlayStation 1",
+      "desarrollador": "Capcom",
+      "imagen": "resident evil 3.jpg"
     }
   ],
   "tbd": [
