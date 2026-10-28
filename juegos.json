@@ -1037,6 +1037,16 @@
       "plataformas": "PlayStation 2",
       "desarrollador": "Capcom",
       "imagen": "monster hunter.jpg"
+    },
+    {
+      "titulo": "Monster Hunter G",
+      "anio": "2005",
+      "mes": "Enero",
+      "fechaOrden": "2005-01-20",
+      "fechaFormateada": "20/01/2005",
+      "plataformas": "PlayStation 2",
+      "desarrollador": "Capcom",
+      "imagen": "monster hunter g.png"
     }
   ],
   "tbd": [
