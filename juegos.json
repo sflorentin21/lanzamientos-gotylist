@@ -927,26 +927,6 @@
       "plataformas": "Nintendo Switch, PlayStation 5, Xbox Series X/S, Steam",
       "desarrollador": "Halberd Studios",
       "imagen": "mariachi legends.png"
-    },
-    {
-      "titulo": "Persona 5 Royal",
-      "anio": "2022",
-      "mes": "Octubre",
-      "fechaOrden": "2022-10-21",
-      "fechaFormateada": "21/10/2022",
-      "plataformas": "PlayStation 5, Xbox One, Xbox Series X/S, Nintendo Switch, Steam",
-      "desarrollador": "P-Studio",
-      "imagen": "persona 5 royal.jpg"
-    },
-    {
-      "titulo": "Resident Evil Village",
-      "anio": "2021",
-      "mes": "Mayo",
-      "fechaOrden": "2021-05-07",
-      "fechaFormateada": "07/05/2021",
-      "plataformas": "PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, Steam",
-      "desarrollador": "Capcom",
-      "imagen": "resident evil village.jpg"
     }
   ],
   "tbd": [
