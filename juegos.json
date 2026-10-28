@@ -1027,6 +1027,16 @@
       "plataformas": "PlayStation",
       "desarrollador": "Capcom",
       "imagen": "resident evil.jpg"
+    },
+    {
+      "titulo": "Monster Hunter",
+      "anio": "2004",
+      "mes": "Septiembre",
+      "fechaOrden": "2004-09-21",
+      "fechaFormateada": "21/09/2004",
+      "plataformas": "PlayStation 2",
+      "desarrollador": "Capcom",
+      "imagen": "monster hunter.jpg"
     }
   ],
   "tbd": [
