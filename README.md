@@ -11,4 +11,7 @@ etiqueta desarrollador
 se modifica:
 color fuentes
 
-ultima versión 2.5 ------26/10/26
+ultima versión 2.8 ------28/10/26
+
+Se agrega búsqueda global
+Se agrega opción de eliminación en modo edición.
