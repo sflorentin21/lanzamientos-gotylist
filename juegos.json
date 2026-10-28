@@ -937,6 +937,16 @@
       "plataformas": "PlayStation 5, Xbox One, Xbox Series X/S, Nintendo Switch, Steam",
       "desarrollador": "P-Studio",
       "imagen": "persona 5 royal.jpg"
+    },
+    {
+      "titulo": "Hades",
+      "anio": "2020",
+      "mes": "Septiembre",
+      "fechaOrden": "2020-09-17",
+      "fechaFormateada": "17/09/2020",
+      "plataformas": "Steam",
+      "desarrollador": "Supergiant Games",
+      "imagen": "hades.jpg"
     }
   ],
   "tbd": [
@@ -1171,14 +1181,6 @@
       "plataformas": "PlayStation 5",
       "desarrollador": "Sony Santa Monica",
       "imagen": "null"
-    },
-    {
-      "titulo": "Hades",
-      "anio": "TBD",
-      "fechaFormateada": "Por Anunciar",
-      "plataformas": "Steam",
-      "desarrollador": "Supergiant Games",
-      "imagen": "hades.jpg"
     }
   ],
   "goty": [
