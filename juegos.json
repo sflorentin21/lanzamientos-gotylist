@@ -947,6 +947,16 @@
       "plataformas": "Steam",
       "desarrollador": "Supergiant Games",
       "imagen": "hades.jpg"
+    },
+    {
+      "titulo": "Resident Evil Village",
+      "anio": "2021",
+      "mes": "Mayo",
+      "fechaOrden": "2021-05-07",
+      "fechaFormateada": "07/05/2021",
+      "plataformas": "PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, Steam",
+      "desarrollador": "Capcom",
+      "imagen": "resident evil village.jpg"
     }
   ],
   "tbd": [
