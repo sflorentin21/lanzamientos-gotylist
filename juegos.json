@@ -896,6 +896,16 @@
       "plataformas": "Steam",
       "desarrollador": "Supergiant Games",
       "imagen": "HadesII.jpg"
+    },
+    {
+      "titulo": "Orbitals",
+      "anio": "2026",
+      "mes": "Septiembre",
+      "fechaOrden": "2026-09-03",
+      "fechaFormateada": "03/09/2026",
+      "plataformas": "Nintendo Switch 2",
+      "desarrollador": "Shapefarm",
+      "imagen": "Orbitals.jpg"
     }
   ],
   "tbd": [
