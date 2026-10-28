@@ -1067,6 +1067,16 @@
       "plataformas": "Nintendo Wii",
       "desarrollador": "Capcom",
       "imagen": "monster hunter tri.jpg"
+    },
+    {
+      "titulo": "Monster Hunter Generations Ultimate",
+      "anio": "2018",
+      "mes": "Agosto",
+      "fechaOrden": "2018-08-28",
+      "fechaFormateada": "28/08/2018",
+      "plataformas": "Nintendo Switch",
+      "desarrollador": "Capcom",
+      "imagen": "monster hunter generations ultimate.jpg"
     }
   ],
   "tbd": [
