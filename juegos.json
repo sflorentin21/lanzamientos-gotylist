@@ -999,26 +999,6 @@
       "imagen": "resident evil 6.jpg"
     },
     {
-      "titulo": "Resident Evil 3: Nemesis",
-      "anio": "1999",
-      "mes": "Noviembre",
-      "fechaOrden": "1999-11-11",
-      "fechaFormateada": "11/11/1999",
-      "plataformas": "PlayStation",
-      "desarrollador": "Capcom",
-      "imagen": "resident evil 3.jpg"
-    },
-    {
-      "titulo": "Resident Evil 2",
-      "anio": "1998",
-      "mes": "Enero",
-      "fechaOrden": "1998-01-21",
-      "fechaFormateada": "21/01/1998",
-      "plataformas": "PlayStation",
-      "desarrollador": "Capcom",
-      "imagen": "resident evil 2.jpg"
-    },
-    {
       "titulo": "Monster Hunter",
       "anio": "2004",
       "mes": "Septiembre",
