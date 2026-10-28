@@ -907,6 +907,16 @@
       "plataformas": "Nintendo Switch 2",
       "desarrollador": "Shapefarm",
       "imagen": "Orbitals.jpg"
+    },
+    {
+      "titulo": "Exodus",
+      "anio": "2027",
+      "mes": "Abril",
+      "fechaOrden": "2027-04-07",
+      "fechaFormateada": "07/04/2027",
+      "plataformas": "Steam",
+      "desarrollador": "Archetype Entertainment",
+      "imagen": "exodus.jpg"
     }
   ],
   "tbd": [
