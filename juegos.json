@@ -886,6 +886,16 @@
       "plataformas": "PlayStation 4, PlayStation 5, Steam, Xbox One, and Xbox Series X/S",
       "desarrollador": "P-Studio",
       "imagen": "persona 3 reload.avif"
+    },
+    {
+      "titulo": "Hades II",
+      "anio": "2026",
+      "mes": "Septiembre",
+      "fechaOrden": "2026-09-25",
+      "fechaFormateada": "25/09/2026",
+      "plataformas": "Steam",
+      "desarrollador": "Supergiant Games",
+      "imagen": "HadesII.jpg"
     }
   ],
   "tbd": [
