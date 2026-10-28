@@ -1057,6 +1057,16 @@
       "plataformas": "PlayStation 2",
       "desarrollador": "Capcom",
       "imagen": "monster hunter 2.jpg"
+    },
+    {
+      "titulo": "Monster Hunter Tri",
+      "anio": "2010",
+      "mes": "Abril",
+      "fechaOrden": "2010-04-20",
+      "fechaFormateada": "20/04/2010",
+      "plataformas": "Nintendo Wii",
+      "desarrollador": "Capcom",
+      "imagen": "monster hunter tri.jpg"
     }
   ],
   "tbd": [
