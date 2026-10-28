@@ -1,0 +1,1776 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de Lanzamientos, TBD y GOTY - v2.7</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo-web.png">
+
+    <!-- Importación de la fuente Kanit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* VARIABLES DE TEMA (OSCURO POR DEFECTO) */
+        body {
+            font-family: 'Kanit', sans-serif;
+            font-weight: 400;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* CABECERA FIJA (STICKY HEADER) */
+        .header-fijo {
+            position: sticky;
+            top: 0;
+            background-color: #121212;
+            z-index: 999;
+            padding: 12px 20px;
+            border-bottom: 1px solid #222;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        /* FILA SUPERIOR: LOGO Y TÍTULO A LA IZQUIERDA, INICIAR SESIÓN A LA DERECHA */
+        .header-fila-superior {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .header-izquierda {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+        }
+
+        .header-izquierda img {
+            height: 38px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        h1 {
+            font-size: 20px;
+            color: #ffffff;
+            margin: 0;
+            font-weight: 600; 
+        }
+
+        /* FILA INFERIOR: NAVEGACIÓN, FILTROS, BUSCADOR Y BOTÓN TEMA EN LA MISMA LÍNEA */
+        .header-fila-inferior {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .nav-centro {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            flex-grow: 1;
+        }
+
+        .btn-navegacion, .btn-accion, .btn-modo-editar, .btn-login-logout, .btn-tema {
+            font-family: 'Kanit', sans-serif;
+            font-weight: 400;
+            background-color: #333;
+            color: #ffffff;
+            border: 1px solid #444;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+        }
+        .btn-navegacion:hover, .btn-accion:hover, .btn-modo-editar:hover, .btn-login-logout:hover, .btn-tema:hover {
+            background-color: #ffffff;
+            border-color: #ffffff;
+            color: #121212;
+        }
+        .btn-accion {
+            background-color: #2e7d32;
+            display: none;
+        }
+        .btn-modo-editar {
+            background-color: #d84315;
+            display: none;
+        }
+        .btn-modo-editar.activo {
+            background-color: #c62828;
+            border-color: #ff5252;
+        }
+        .btn-login-logout {
+            background-color: #37474f;
+        }
+        
+        .btn-tema {
+            background-color: #2c2c2c;
+            border-color: #555;
+        }
+
+        /* FILTROS Y BUSCADOR INTEGRADOS CON ALCANCE Y BOTÓN LIMPIAR ("X") */
+        .filtro-grupo {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            padding: 4px 10px;
+            border-radius: 6px;
+            transition: background-color 0.3s, border-color 0.3s;
+            position: relative;
+        }
+        .filtro-grupo label {
+            font-size: 13px;
+            color: #ffb74d;
+            font-weight: 400;
+        }
+        .filtro-grupo select, .filtro-grupo input {
+            font-family: 'Kanit', sans-serif;
+            font-weight: 400;
+            background-color: transparent;
+            color: #ffffff;
+            border: none;
+            padding: 4px;
+            font-size: 14px;
+            outline: none;
+        }
+        .filtro-grupo select option {
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+        .contenedor-input-busqueda {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .filtro-grupo input {
+            width: 120px;
+            padding-right: 22px;
+        }
+        .filtro-grupo input::placeholder {
+            color: #777;
+        }
+
+        /* BOTÓN "X" PARA LIMPIAR BÚSQUEDA BIEN POSICIONADO */
+        .btn-limpiar-busqueda {
+            position: absolute;
+            right: 4px;
+            background: none;
+            border: none;
+            color: #888;
+            font-size: 13px;
+            cursor: pointer;
+            display: none;
+            padding: 0;
+            line-height: 1;
+        }
+        .btn-limpiar-busqueda:hover {
+            color: #ffffff;
+        }
+        
+        /* Estilos de Modales */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .modal-formulario {
+            background-color: #1a1a1a;
+            border: 1px solid #444;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 550px;
+            padding: 25px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.7);
+            box-sizing: border-box;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .modal-formulario h3 {
+            margin-top: 0;
+            color: #ffb74d;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .form-group.full {
+            grid-column: span 2;
+        }
+        .form-group label {
+            font-size: 13px;
+            color: #bbb;
+        }
+        .form-group input, .form-group select {
+            font-family: 'Kanit', sans-serif;
+            font-weight: 400;
+            background-color: #262626;
+            color: #ffffff;
+            border: 1px solid #444;
+            padding: 10px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            outline: none;
+        }
+        .form-group input:focus, .form-group select:focus {
+            border-color: #ffffff;
+        }
+        .form-acciones {
+            grid-column: span 2;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .btn-guardar {
+            font-family: 'Kanit', sans-serif;
+            font-weight: 400;
+            background-color: #ffffff;
+            color: #121212;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .btn-cancelar {
+            font-family: 'Kanit', sans-serif;
+            font-weight: 400;
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .error-login {
+            color: #ff5252;
+            text-align: center;
+            font-size: 13px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        /* SECCIÓN DE MES CON SOLAPAS INDEPENDIENTES Y VERTICALES */
+        .seccion-mes {
+            display: flex;
+            flex-direction: column;
+            background-color: #181818;
+            border: 1px solid #333;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            max-width: 100%;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        /* CONTENEDOR DE SOLAPAS APILADAS VERTICALMENTE */
+        .columna-tiempo-superior {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .caja-anio, .caja-mes {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 15px;
+            font-weight: 600;
+            font-size: 15px;
+            text-align: center;
+            letter-spacing: 1px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .caja-anio {
+            background-color: #2e2e2e;
+            color: #ffffff;
+            border-bottom: 1px solid #333;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .caja-mes {
+            background-color: #222;
+            color: #ffb74d;
+            border-bottom: 1px solid #333;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        /* GRILLA DE JUEGOS CALENDARIO / TBD (ORIENTADA A LA IZQUIERDA) */
+        .grilla-juegos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 250px);
+            justify-content: start;
+            gap: 20px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .tarjeta-juego {
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            width: 250px;
+            flex-shrink: 0;
+            border: 1px solid transparent;
+            transition: background-color 0.3s, box-shadow 0.3s, border-color 0.3s;
+        }
+        
+        .tarjeta-juego img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            object-position: center;
+            image-rendering: auto;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .info-juego {
+            padding: 12px;
+            text-align: center;
+        }
+        .info-juego h3.titulo-lanzamiento {
+            font-size: 14px;
+            margin: 0 0 8px 0;
+            background-color: #e69138;
+            color: #ffffff;
+            padding: 5px 8px;
+            border-radius: 4px;
+            font-weight: 400;
+        }
+        .fecha {
+            background-color: #333;
+            color: #ffffff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 400;
+            font-size: 12px;
+            display: inline-block;
+            margin-bottom: 6px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .desarrollador-tarjeta {
+            background-color: #2a2a2a;
+            color: #ffb74d;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-size: 11px;
+            display: block;
+            margin-bottom: 6px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .plataformas {
+            background-color: #3a3a3a;
+            color: #ffffff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            display: block;
+            margin-top: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .sin-resultados {
+            text-align: center;
+            color: #888;
+            padding: 40px;
+            font-size: 16px;
+        }
+
+        /* BOTONES DE EDICIÓN Y ELIMINACIÓN SOBRE LA TARJETA */
+        .btn-editar-tarjeta {
+            font-family: 'Kanit', sans-serif;
+            font-weight: 400;
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background-color: rgba(0, 0, 0, 0.85);
+            color: #ffb74d;
+            border: 1px solid #ffb74d;
+            padding: 5px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            cursor: pointer;
+            display: none;
+            z-index: 10;
+        }
+        .btn-editar-tarjeta:hover {
+            background-color: #ffb74d;
+            color: #121212;
+        }
+
+        .btn-eliminar-tarjeta {
+            font-family: 'Kanit', sans-serif;
+            font-weight: 700;
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            background-color: rgba(200, 0, 0, 0.85);
+            color: #ffffff;
+            border: 1px solid #ff5252;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            font-size: 13px;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: background-color 0.2s;
+        }
+        .btn-eliminar-tarjeta:hover {
+            background-color: #ff5252;
+        }
+
+        /* SECCIÓN GLOBAL DE RESULTADOS DE BÚSQUEDA (CON BARRA VERTICAL) */
+        .seccion-global-resultados {
+            background-color: #181818;
+            border: 1px solid #333;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            padding: 20px;
+        }
+        .titulo-seccion-global {
+            font-size: 16px;
+            color: #ffb74d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            padding-left: 12px;
+            border-left: 4px solid #ffb74d;
+            line-height: 1.2;
+        }
+
+        /* ==========================================================================
+           SECCIÓN GOTY PREMIUM (6 JUEGOS POR FILA Y ALINEACIÓN CENTRADA)
+           ========================================================================== */
+        .seccion-goty-container {
+            max-width: 1680px;
+            margin: 0 auto;
+            padding: 10px 0;
+        }
+
+        .goty-titulo-seccion {
+            text-align: center;
+            font-size: 26px;
+            font-weight: 700;
+            color: #f1c40f;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 0 2px 10px rgba(241, 196, 15, 0.25);
+        }
+
+        .grilla-goty {
+            display: grid;
+            grid-template-columns: repeat(6, 250px);
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .tarjeta-goty-premium {
+            background: linear-gradient(145deg, #1e1e1e 0%, #161616 100%);
+            border: 2px solid #d4af37;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.15);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            width: 250px;
+            flex-shrink: 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tarjeta-goty-premium:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(212, 175, 55, 0.3);
+            border-color: #f39c12;
+        }
+
+        .tarjeta-goty-premium img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            object-position: center;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .goty-badge-corona {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: linear-gradient(135deg, #f1c40f 0%, #d4af37 100%);
+            color: #121212;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+            z-index: 5;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .info-goty-premium {
+            padding: 12px;
+            text-align: center;
+            background: rgba(20, 20, 20, 0.95);
+        }
+
+        .info-goty-premium h3.titulo-goty {
+            font-size: 14px;
+            margin: 0 0 8px 0;
+            color: #ffffff;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .etiqueta-anio-goty {
+            background-color: #d4af37;
+            color: #121212;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 12px;
+            display: inline-block;
+            margin-bottom: 6px;
+        }
+
+        .desarrollador-goty {
+            background-color: #2a2a2a;
+            color: #f1c40f;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            display: block;
+            margin-top: 4px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        /* ==========================================================================
+           ESTILOS DE MODO CLARO (LIGHT MODE)
+           ========================================================================== */
+        body.light-mode {
+            background-color: #f5f4f9;
+            color: #221e3b;
+        }
+
+        body.light-mode .header-fijo {
+            background-color: #f5f4f9;
+            border-bottom-color: #e2def2;
+        }
+
+        body.light-mode h1 {
+            color: #221e3b;
+        }
+
+        body.light-mode .btn-navegacion, 
+        body.light-mode .btn-login-logout,
+        body.light-mode .btn-tema {
+            background-color: #eae7f6;
+            color: #382c70;
+            border-color: #d6cfe8;
+        }
+        body.light-mode .btn-navegacion:hover,
+        body.light-mode .btn-login-logout:hover,
+        body.light-mode .btn-tema:hover {
+            background-color: #382c70;
+            border-color: #382c70;
+            color: #ffffff;
+        }
+
+        body.light-mode .filtro-grupo {
+            background-color: #ffffff;
+            border-color: #d6cfe8;
+        }
+
+        body.light-mode .filtro-grupo label {
+            color: #5c4bbd;
+        }
+
+        body.light-mode .filtro-grupo select,
+        body.light-mode .filtro-grupo input {
+            color: #221e3b;
+        }
+
+        body.light-mode .filtro-grupo select option {
+            background-color: #ffffff;
+            color: #221e3b;
+        }
+
+        body.light-mode .filtro-grupo input::placeholder {
+            color: #8c85a6;
+        }
+
+        body.light-mode .btn-limpiar-busqueda {
+            color: #5c4bbd;
+        }
+
+        body.light-mode .seccion-mes,
+        body.light-mode .seccion-global-resultados {
+            background-color: #ffffff;
+            border-color: #e2def2;
+            box-shadow: 0 4px 16px rgba(56, 44, 112, 0.04);
+        }
+
+        body.light-mode .caja-anio {
+            background-color: #e2def2;
+            color: #382c70;
+            border-bottom-color: #d0c8eb;
+        }
+
+        body.light-mode .caja-mes {
+            background-color: #edeaf7;
+            color: #5c4bbd;
+            border-bottom-color: #e2def2;
+        }
+
+        body.light-mode .titulo-seccion-global {
+            color: #5c4bbd;
+            border-left-color: #5c4bbd;
+        }
+
+        body.light-mode .tarjeta-juego {
+            background-color: #ffffff;
+            border-color: #e2def2;
+            box-shadow: 0 6px 20px rgba(56, 44, 112, 0.06);
+        }
+
+        body.light-mode .tarjeta-goty-premium {
+            background: #ffffff;
+            border-color: #c5a059;
+            box-shadow: 0 8px 24px rgba(197, 160, 89, 0.15);
+        }
+
+        body.light-mode .info-goty-premium {
+            background: #faf9ff;
+        }
+
+        body.light-mode .info-goty-premium h3.titulo-goty {
+            color: #221e3b;
+        }
+
+        body.light-mode .goty-titulo-seccion {
+            color: #b8860b;
+            text-shadow: 0 2px 10px rgba(184, 134, 11, 0.15);
+        }
+
+        body.light-mode .fecha {
+            background-color: #eae7f6;
+            color: #382c70;
+        }
+
+        body.light-mode .desarrollador-tarjeta {
+            background-color: #f3f0fb;
+            color: #5c4bbd;
+        }
+
+        body.light-mode .plataformas,
+        body.light-mode .desarrollador-goty {
+            background-color: #f3f0fb;
+            color: #4b426e;
+        }
+
+        body.light-mode .modal-formulario {
+            background-color: #ffffff;
+            border-color: #d6cfe8;
+            color: #221e3b;
+            box-shadow: 0 12px 32px rgba(56, 44, 112, 0.15);
+        }
+
+        body.light-mode .modal-formulario h3 {
+            color: #5c4bbd;
+        }
+
+        body.light-mode .form-group label {
+            color: #5a5278;
+        }
+
+        body.light-mode .form-group input, 
+        body.light-mode .form-group select {
+            background-color: #f8f7fc;
+            color: #221e3b;
+            border-color: #d6cfe8;
+        }
+
+        /* VISTA RESPONSIVE / MOBILE */
+        @media (max-width: 1500px) {
+            .grilla-goty {
+                grid-template-columns: repeat(auto-fill, 250px);
+                justify-content: start;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .header-fijo {
+                padding: 10px;
+            }
+
+            .header-fila-superior {
+                gap: 10px;
+            }
+
+            .header-fila-inferior {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .nav-centro {
+                width: 100%;
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .filtro-grupo {
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .filtro-grupo input {
+                width: 100%;
+                padding-right: 25px;
+            }
+
+            .grilla-juegos, .grilla-goty {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                gap: 15px;
+                padding: 15px;
+                justify-content: start;
+            }
+
+            .tarjeta-juego, .tarjeta-goty-premium {
+                scroll-snap-align: start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SECCIÓN FIJA SUPERIOR (STICKY) -->
+    <div class="header-fijo">
+        <!-- Fila 1: Logo y Título a la izquierda, Iniciar Sesión aislado a la derecha -->
+        <div class="header-fila-superior">
+            <div class="header-izquierda" onclick="cambiarVista('calendario')">
+                <img src="logo-web.png" alt="Logo">
+                <h1>Calendario de Lanzamientos</h1>
+            </div>
+
+            <button id="btn-login-logout" class="btn-login-logout" onclick="gestionarSesion()">🔐 Iniciar Sesión</button>
+        </div>
+
+        <!-- Fila 2: Navegación, Buscador, Filtros y Botón de Tema en la misma fila -->
+        <div class="header-fila-inferior">
+            <div class="nav-centro">
+                <button class="btn-navegacion" onclick="cambiarVista('calendario')">📅 Calendario</button>
+                <button class="btn-navegacion" onclick="cambiarVista('tbd')">⏳ TBD</button>
+                <button class="btn-navegacion" onclick="cambiarVista('goty')">🏆 GOTY List</button>
+                
+                <div id="panel-filtros" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <!-- BUSCADOR CON ALCANCE Y BOTÓN LIMPIAR ("X") BIEN UBICADO -->
+                    <div class="filtro-grupo">
+                        <label for="input-busqueda">🔍</label>
+                        <div class="contenedor-input-busqueda">
+                            <input type="text" id="input-busqueda" placeholder="Buscar..." oninput="manejarEntradaBusqueda()">
+                            <button id="btn-limpiar-busqueda" class="btn-limpiar-busqueda" onclick="limpiarBusqueda()" title="Limpiar búsqueda">✕</button>
+                        </div>
+                        <select id="filtro-alcance-busqueda" onchange="renderizarSegunVista()" title="Alcance de búsqueda" style="color: #ffb74d; border-left: 1px solid #333; padding-left: 6px; cursor: pointer;">
+                            <option value="seccion">Sección actual</option>
+                            <option value="global">Global (Todo)</option>
+                        </select>
+                    </div>
+                    <!-- FILTRO DE AÑO (DINÁMICO) -->
+                    <div class="filtro-grupo" id="grupo-filtro-anio">
+                        <label for="filtro-anio">Año:</label>
+                        <select id="filtro-anio" onchange="renderizarSegunVista()">
+                            <option value="todos">Todos</option>
+                        </select>
+                    </div>
+                    <div class="filtro-grupo" id="grupo-filtro-plataforma">
+                        <label for="filtro-plataforma">Plataforma:</label>
+                        <select id="filtro-plataforma" onchange="renderizarSegunVista()">
+                            <option value="todas">Todas</option>
+                            <option value="Steam">Steam</option>
+                            <option value="PlayStation 5">PlayStation 5</option>
+                            <option value="PlayStation 4">PlayStation 4</option>
+                            <option value="Nintendo Switch">Nintendo Switch</option>
+                            <option value="Nintendo Switch 2">Nintendo Switch 2</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button id="btn-agregar" class="btn-accion" onclick="abrirModalCrear()">➕ Agregar Nuevo Juego</button>
+                <button id="btn-modo-editar" class="btn-modo-editar" onclick="alternarModoEdicion()">✏️ Activar Edición</button>
+            </div>
+
+            <!-- BOTÓN DE TEMA EN LA MISMA FILA INFERIOR -->
+            <button id="btn-tema" class="btn-tema" onclick="alternarTema()">☀️ Modo Claro</button>
+        </div>
+    </div>
+
+    <!-- MODAL DE LOGIN -->
+    <div id="modal-overlay-login" class="modal-overlay">
+        <div class="modal-formulario">
+            <h3>Acceso de Administrador</h3>
+            <form onsubmit="procesarLogin(event)">
+                <div class="form-grid">
+                    <div class="form-group full">
+                        <label for="input-usuario">Usuario</label>
+                        <input type="text" id="input-usuario" required placeholder="Usuario">
+                    </div>
+                    <div class="form-group full">
+                        <label for="input-pass">GitHub Personal Access Token</label>
+                        <input type="password" id="input-pass" required placeholder="Token de GitHub">
+                    </div>
+                    <div class="form-group full">
+                        <div id="error-login" class="error-login">Token inválido o error de autenticación.</div>
+                    </div>
+                    <div class="form-acciones">
+                        <button type="button" class="btn-cancelar" onclick="cerrarModalLogin()">Cancelar</button>
+                        <button type="submit" class="btn-guardar">Entrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL DE FORMULARIO -->
+    <div id="modal-overlay-formulario" class="modal-overlay">
+        <div class="modal-formulario">
+            <h3 id="titulo-form">Registrar Juego</h3>
+            <form id="form-nuevo-juego" onsubmit="guardarJuego(event)">
+                <input type="hidden" id="input-index" value="-1">
+                <input type="hidden" id="input-origen-vista" value="calendario">
+                
+                <div class="form-grid">
+                    <div class="form-group full">
+                        <label for="input-titulo">Título del Juego</label>
+                        <input type="text" id="input-titulo" required placeholder="Ej. Hollow Knight: Silksong">
+                    </div>
+
+                    <div class="form-group campo-calendario-tbd">
+                        <label for="input-fecha">Fecha de Lanzamiento (Dejar en blanco para TBD)</label>
+                        <input type="date" id="input-fecha">
+                    </div>
+
+                    <div class="form-group campo-tbd-anio" style="display: none;">
+                        <label for="input-anio-estimado">Año Posible/Estimado (TBD)</label>
+                        <input type="number" id="input-anio-estimado" min="2024" max="2035" placeholder="Ej. 2027">
+                    </div>
+
+                    <div class="form-group campo-calendario-tbd">
+                        <label for="input-plataformas">Plataformas</label>
+                        <input type="text" id="input-plataformas" placeholder="Ej. Steam, Nintendo Switch">
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="input-desarrollador">Desarrollador</label>
+                        <input type="text" id="input-desarrollador" placeholder="Ej. Capcom, FromSoftware">
+                    </div>
+
+                    <div class="form-group campo-goty" style="display: none;">
+                        <label for="input-anio-goty">Año GOTY</label>
+                        <input type="number" id="input-anio-goty" min="2004" max="2030" placeholder="Ej. 2026">
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="input-imagen">Nombre del archivo de imagen (en img/)</label>
+                        <input type="text" id="input-imagen" required placeholder="Ej. portada.jpg">
+                    </div>
+
+                    <div class="form-acciones">
+                        <button type="button" class="btn-cancelar" onclick="ocultarFormularios()">Cancelar</button>
+                        <button type="submit" id="btn-guardar-form" class="btn-guardar">Guardar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="vista-contenido"></div>
+
+    <script>
+        // CONFIGURACIÓN DE TU REPOSITORIO DE GITHUB
+        const GITHUB_REPO = "sflorentin21/lanzamientos-gotylist";
+        const API_URL = `https://api.github.com/repos/${GITHUB_REPO}/contents/juegos.json`;
+
+        let juegos = [];
+        let juegosTbd = [];
+        let listaGoty = [];
+        let fileSHA = "";
+        let githubTokenSesion = sessionStorage.getItem('github_token') || "";
+
+        let vistaActual = 'calendario';
+        let modoEdicionActivo = false;
+        let esAdmin = !!githubTokenSesion;
+
+        // LÓGICA DE CAMBIO DE TEMA CLARO / OSCURO CON PERSISTENCIA
+        function inicializarTema() {
+            const temaGuardado = localStorage.getItem('pref_tema');
+            const btnTema = document.getElementById('btn-tema');
+            if (temaGuardado === 'light') {
+                document.body.classList.add('light-mode');
+                btnTema.innerText = "🌙 Modo Oscuro";
+            } else {
+                document.body.classList.remove('light-mode');
+                btnTema.innerText = "☀️ Modo Claro";
+            }
+        }
+
+        function alternarTema() {
+            const esClaro = document.body.classList.toggle('light-mode');
+            const btnTema = document.getElementById('btn-tema');
+
+            if (esClaro) {
+                btnTema.innerText = "🌙 Modo Oscuro";
+                localStorage.setItem('pref_tema', 'light');
+            } else {
+                btnTema.innerText = "☀️ Modo Claro";
+                localStorage.setItem('pref_tema', 'dark');
+            }
+        }
+
+        // CONTROL DE BÚSQUEDA Y BOTÓN "X"
+        function manejarEntradaBusqueda() {
+            const input = document.getElementById('input-busqueda');
+            const btnLimpiar = document.getElementById('btn-limpiar-busqueda');
+            if (input.value.trim().length > 0) {
+                btnLimpiar.style.display = 'block';
+            } else {
+                btnLimpiar.style.display = 'none';
+            }
+            renderizarSegunVista();
+        }
+
+        function limpiarBusqueda() {
+            const input = document.getElementById('input-busqueda');
+            input.value = "";
+            document.getElementById('btn-limpiar-busqueda').style.display = 'none';
+            renderizarSegunVista();
+        }
+
+        // SCROLL AUTOMÁTICO HASTA EL JUEGO MÁS PRÓXIMO EN CALENDARIO
+        function posicionarEnJuegoMasProximo() {
+            if (vistaActual !== 'calendario') return;
+            const alcance = document.getElementById('filtro-alcance-busqueda').value;
+            if (alcance === 'global' && document.getElementById('input-busqueda').value.trim() !== "") return;
+            
+            const hoy = new Date();
+            hoy.setHours(0, 0, 0, 0);
+
+            const tarjetas = document.querySelectorAll('.tarjeta-juego');
+            if (tarjetas.length === 0) return;
+
+            let tarjetaMasCercana = null;
+            let menorDiferencia = Infinity;
+
+            tarjetas.forEach(tarjeta => {
+                const fechaStr = tarjeta.getAttribute('data-fecha');
+                if (fechaStr) {
+                    const fechaJuego = new Date(fechaStr);
+                    fechaJuego.setHours(0, 0, 0, 0);
+                    
+                    const diff = fechaJuego - hoy;
+                    if (diff >= 0 && diff < menorDiferencia) {
+                        menorDiferencia = diff;
+                        tarjetaMasCercana = tarjeta;
+                    }
+                }
+            });
+
+            if (!tarjetaMasCercana && tarjetas.length > 0) {
+                tarjetaMasCercana = tarjetas[0];
+            }
+
+            if (tarjetaMasCercana) {
+                tarjetaMasCercana.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+
+        // GENERAR AÑOS DINÁMICAMENTE EN EL DESPLEGABLE
+        function actualizarOpcionesFiltroAnio() {
+            const selectorAnio = document.getElementById('filtro-anio');
+            const valorActual = selectorAnio.value;
+            
+            const conjuntoOrigen = vistaActual === 'tbd' ? juegosTbd : juegos;
+            const aniosExistentes = [...new Set(conjuntoOrigen.map(j => j.anio).filter(Boolean))];
+            aniosExistentes.sort((a, b) => parseInt(a) - parseInt(b));
+
+            selectorAnio.innerHTML = `<option value="todos">Todos</option>`;
+            aniosExistentes.forEach(anio => {
+                const option = document.createElement('option');
+                option.value = anio;
+                option.textContent = anio;
+                selectorAnio.appendChild(option);
+            });
+
+            if (aniosExistentes.includes(valorActual)) {
+                selectorAnio.value = valorActual;
+            } else {
+                selectorAnio.value = "todos";
+            }
+        }
+
+        // Cargar datos desde GitHub API
+        async function cargarDatosGitHub() {
+            try {
+                const cabeceras = {
+                    'Accept': 'application/vnd.github.v3+json'
+                };
+                if (githubTokenSesion) {
+                    cabeceras['Authorization'] = `Bearer ${githubTokenSesion}`;
+                }
+                
+                const respuesta = await fetch(API_URL, { headers: cabeceras });
+                if (respuesta.ok) {
+                    const data = await respuesta.json();
+                    fileSHA = data.sha;
+                    const jsonTexto = decodeURIComponent(escape(atob(data.content)));
+                    const jsonDatos = JSON.parse(jsonTexto);
+                    juegos = jsonDatos.calendario || [];
+                    juegosTbd = jsonDatos.tbd || [];
+                    listaGoty = jsonDatos.goty || [];
+                    
+                    actualizarOpcionesFiltroAnio();
+                    renderizarSegunVista();
+                } else {
+                    console.error("Error al cargar juegos.json:", respuesta.statusText);
+                }
+            } catch (error) {
+                console.error("Error de conexión con GitHub:", error);
+            }
+        }
+
+        // Guardar cambios directamente en juegos.json
+        async function guardarEnGitHub() {
+            const btnGuardar = document.getElementById('btn-guardar-form');
+            if (btnGuardar) {
+                btnGuardar.disabled = true;
+                btnGuardar.innerText = "Guardando en GitHub...";
+            }
+
+            const contenidoNuevo = JSON.stringify({
+                calendario: juegos,
+                tbd: juegosTbd,
+                goty: listaGoty
+            }, null, 2);
+
+            const contenidoBase64 = btoa(unescape(encodeURIComponent(contenidoNuevo)));
+
+            try {
+                const respuesta = await fetch(API_URL, {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': `Bearer ${githubTokenSesion}`,
+                        'Accept': 'application/vnd.github.v3+json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: "Actualización v2.7 desde panel de administración",
+                        content: contenidoBase64,
+                        sha: fileSHA
+                    })
+                });
+
+                if (respuesta.ok) {
+                    const resJson = await respuesta.json();
+                    fileSHA = resJson.content.sha;
+                    alert("¡Cambios guardados en GitHub con éxito!");
+                } else {
+                    const errData = await respuesta.json();
+                    console.error("Detalle del error de GitHub:", errData);
+                    alert(`Error al guardar en GitHub (${respuesta.status}): ${errData.message || 'Verifica permisos'}`);
+                }
+            } catch (error) {
+                alert("Error de red al conectar con GitHub.");
+            } finally {
+                if (btnGuardar) {
+                    btnGuardar.disabled = false;
+                    btnGuardar.innerText = "Guardar";
+                }
+            }
+        }
+
+        function cambiarVista(vista) {
+            vistaActual = vista;
+            ocultarFormularios();
+            const panelFiltros = document.getElementById('panel-filtros');
+            const grupoAnio = document.getElementById('grupo-filtro-anio');
+            const grupoPlataforma = document.getElementById('grupo-filtro-plataforma');
+            
+            if (vistaActual === 'calendario' || vistaActual === 'tbd') {
+                panelFiltros.style.display = 'flex';
+                grupoAnio.style.display = 'flex';
+                grupoPlataforma.style.display = 'flex';
+                actualizarOpcionesFiltroAnio();
+            } else {
+                panelFiltros.style.display = 'flex';
+                grupoAnio.style.display = 'none';
+                grupoPlataforma.style.display = 'none';
+            }
+
+            window.scrollTo({ top: 0, behavior: 'instant' });
+            renderizarSegunVista();
+        }
+
+        function renderizarSegunVista() {
+            const alcance = document.getElementById('filtro-alcance-busqueda').value;
+            const textoBusqueda = document.getElementById('input-busqueda').value.toLowerCase().trim();
+
+            if (alcance === 'global' && textoBusqueda !== "") {
+                renderizarBusquedaGlobal(textoBusqueda);
+            } else {
+                if (vistaActual === 'calendario') renderizarCalendario();
+                else if (vistaActual === 'tbd') renderizarTbd();
+                else if (vistaActual === 'goty') renderizarGoty();
+            }
+        }
+
+        // ELIMINAR JUEGO (vía botón cruz)
+        async function eliminarJuego(coleccion, index, event) {
+            event.stopPropagation();
+            if (!esAdmin) return;
+
+            let nombreJuego = "";
+            if (coleccion === 'calendario') nombreJuego = juegos[index].titulo;
+            else if (coleccion === 'tbd') nombreJuego = juegosTbd[index].titulo;
+            else if (coleccion === 'goty') nombreJuego = listaGoty[index].titulo;
+
+            if (confirm(`¿Estás seguro de que deseas eliminar "${nombreJuego}"?`)) {
+                if (coleccion === 'calendario') juegos.splice(index, 1);
+                else if (coleccion === 'tbd') juegosTbd.splice(index, 1);
+                else if (coleccion === 'goty') listaGoty.splice(index, 1);
+
+                actualizarOpcionesFiltroAnio();
+                renderizarSegunVista();
+                await guardarEnGitHub();
+            }
+        }
+
+        function gestionarSesion() {
+            if (esAdmin) {
+                sessionStorage.removeItem('github_token');
+                githubTokenSesion = "";
+                esAdmin = false;
+                modoEdicionActivo = false;
+                actualizarInterfazAdmin();
+                alert("Has cerrado sesión como administrador.");
+            } else {
+                document.getElementById('error-login').style.display = 'none';
+                document.getElementById('modal-overlay-login').style.display = 'flex';
+            }
+        }
+
+        async function procesarLogin(event) {
+            event.preventDefault();
+            const passToken = document.getElementById('input-pass').value.trim();
+
+            if (!passToken) {
+                document.getElementById('error-login').style.display = 'block';
+                return;
+            }
+
+            try {
+                const res = await fetch(API_URL, {
+                    headers: { 
+                        'Authorization': `Bearer ${passToken}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+
+                if (res.ok) {
+                    githubTokenSesion = passToken;
+                    sessionStorage.setItem('github_token', passToken);
+                    esAdmin = true;
+                    cerrarModalLogin();
+                    actualizarInterfazAdmin();
+                    await cargarDatosGitHub();
+                } else {
+                    const errorInfo = await res.json();
+                    document.getElementById('error-login').innerText = `Error (${res.status}): ${errorInfo.message || 'Token inválido'}`;
+                    document.getElementById('error-login').style.display = 'block';
+                }
+            } catch (err) {
+                document.getElementById('error-login').innerText = "Error de red al conectar con GitHub";
+                document.getElementById('error-login').style.display = 'block';
+            }
+        }
+
+        function cerrarModalLogin() {
+            document.getElementById('modal-overlay-login').style.display = 'none';
+            document.getElementById('input-usuario').value = "";
+            document.getElementById('input-pass').value = "";
+        }
+
+        function actualizarInterfazAdmin() {
+            const btnAgregar = document.getElementById('btn-agregar');
+            const btnModoEditar = document.getElementById('btn-modo-editar');
+            const btnLoginLogout = document.getElementById('btn-login-logout');
+
+            if (esAdmin) {
+                btnAgregar.style.display = 'inline-block';
+                btnModoEditar.style.display = 'inline-block';
+                btnLoginLogout.innerText = "🔒 Cerrar Sesión";
+                btnLoginLogout.style.backgroundColor = "#c62828";
+            } else {
+                btnAgregar.style.display = 'none';
+                btnModoEditar.style.display = 'none';
+                btnModoEditar.innerText = "✏️ Activar Edición";
+                btnModoEditar.classList.remove('activo');
+                btnLoginLogout.innerText = "🔐 Iniciar Sesión";
+                btnLoginLogout.style.backgroundColor = "#37474f";
+            }
+
+            renderizarSegunVista();
+        }
+
+        function alternarModoEdicion() {
+            if (!esAdmin) return;
+            modoEdicionActivo = !modoEdicionActivo;
+            const btnModo = document.getElementById('btn-modo-editar');
+
+            if (modoEdicionActivo) {
+                btnModo.innerText = "❌ Salir de Edición";
+                btnModo.classList.add('activo');
+            } else {
+                btnModo.innerText = "✏️ Activar Edición";
+                btnModo.classList.remove('activo');
+            }
+
+            renderizarSegunVista();
+        }
+
+        function abrirModalCrear() {
+            if (!esAdmin) return;
+            document.getElementById('form-nuevo-juego').reset();
+            document.getElementById('input-index').value = "-1";
+            document.getElementById('input-origen-vista').value = vistaActual;
+            configurarCamposFormulario();
+            document.getElementById('modal-overlay-formulario').style.display = 'flex';
+        }
+
+        function configurarCamposFormulario() {
+            const tituloForm = document.getElementById('titulo-form');
+            const camposCalTbd = document.querySelectorAll('.campo-calendario-tbd');
+            const campoTbdAnio = document.querySelectorAll('.campo-tbd-anio');
+            const camposGoty = document.querySelectorAll('.campo-goty');
+
+            const esNuevo = document.getElementById('input-index').value == "-1";
+
+            if (vistaActual === 'calendario' || vistaActual === 'tbd') {
+                tituloForm.innerText = esNuevo ? `Registrar Juego (${vistaActual.toUpperCase()})` : "Editar Juego";
+                camposCalTbd.forEach(el => el.style.display = 'flex');
+                campoTbdAnio.forEach(el => el.style.display = vistaActual === 'tbd' ? 'flex' : 'none');
+                camposGoty.forEach(el => el.style.display = 'none');
+                
+                document.getElementById('input-fecha').required = false;
+                document.getElementById('input-plataformas').required = true;
+                document.getElementById('input-anio-goty').required = false;
+            } else {
+                tituloForm.innerText = esNuevo ? "Registrar Juego GOTY" : "Editar Juego GOTY";
+                camposCalTbd.forEach(el => el.style.display = 'none');
+                campoTbdAnio.forEach(el => el.style.display = 'none');
+                camposGoty.forEach(el => el.style.display = 'flex');
+                
+                document.getElementById('input-fecha').required = false;
+                document.getElementById('input-plataformas').required = false;
+                document.getElementById('input-anio-goty').required = true;
+            }
+        }
+
+        function ocultarFormularios() {
+            document.getElementById('modal-overlay-formulario').style.display = 'none';
+            document.getElementById('modal-overlay-login').style.display = 'none';
+        }
+
+        function abrirModalEditar(coleccion, index) {
+            if (!esAdmin) return;
+            abrirModalCrear();
+            document.getElementById('input-index').value = index;
+            document.getElementById('input-origen-vista').value = coleccion;
+            configurarCamposFormulario();
+
+            if (coleccion === 'calendario') {
+                const j = juegos[index];
+                document.getElementById('input-titulo').value = j.titulo;
+                document.getElementById('input-fecha').value = j.fechaOrden || "";
+                document.getElementById('input-plataformas').value = j.plataformas;
+                document.getElementById('input-desarrollador').value = j.desarrollador || "";
+                document.getElementById('input-imagen').value = j.imagen;
+            } else if (coleccion === 'tbd') {
+                const j = juegosTbd[index];
+                document.getElementById('input-titulo').value = j.titulo;
+                document.getElementById('input-fecha').value = j.fechaOrden || "";
+                document.getElementById('input-anio-estimado').value = j.anio || "";
+                document.getElementById('input-plataformas').value = j.plataformas;
+                document.getElementById('input-desarrollador').value = j.desarrollador || "";
+                document.getElementById('input-imagen').value = j.imagen;
+            } else {
+                const g = listaGoty[index];
+                document.getElementById('input-titulo').value = g.titulo;
+                document.getElementById('input-anio-goty').value = g.anio;
+                document.getElementById('input-desarrollador').value = g.desarrollador || "";
+                document.getElementById('input-imagen').value = g.imagen;
+            }
+        }
+
+        async function guardarJuego(event) {
+            event.preventDefault();
+            if (!esAdmin) return;
+            const index = parseInt(document.getElementById('input-index').value);
+            const origen = document.getElementById('input-origen-vista').value;
+            
+            const titulo = document.getElementById('input-titulo').value;
+            const desarrollador = document.getElementById('input-desarrollador').value;
+            const imagen = document.getElementById('input-imagen').value;
+
+            if (origen === 'goty') {
+                const anioGoty = document.getElementById('input-anio-goty').value;
+                const objetoGoty = { anio: anioGoty, titulo, desarrollador, imagen };
+
+                if (index === -1) listaGoty.push(objetoGoty);
+                else listaGoty[index] = objetoGoty;
+
+            } else {
+                const fechaInput = document.getElementById('input-fecha').value;
+                const plataformas = document.getElementById('input-plataformas').value;
+
+                if (fechaInput) {
+                    const partesFecha = fechaInput.split('-');
+                    const anio = partesFecha[0];
+                    const mesIndex = parseInt(partesFecha[1]) - 1;
+                    const mesesNombres = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+                    const mes = mesesNombres[mesIndex];
+                    const fechaFormateada = `${partesFecha[2]}/${partesFecha[1]}/${anio}`;
+
+                    const objetoCalendario = { titulo, anio, mes, fechaOrden: fechaInput, fechaFormateada, plataformas, desarrollador, imagen };
+
+                    if (origen === 'tbd' && index !== -1) {
+                        juegosTbd.splice(index, 1);
+                        juegos.push(objetoCalendario);
+                    } else if (origen === 'calendario' && index !== -1) {
+                        juegos[index] = objetoCalendario;
+                    } else {
+                        juegos.push(objetoCalendario);
+                    }
+
+                } else {
+                    const anioEstimado = document.getElementById('input-anio-estimado').value || "TBD";
+                    const objetoTbd = { titulo, anio: anioEstimado, fechaFormateada: "Por Anunciar", plataformas, desarrollador, imagen };
+
+                    if (origen === 'calendario' && index !== -1) {
+                        juegos.splice(index, 1);
+                        juegosTbd.push(objetoTbd);
+                    } else if (origen === 'tbd' && index !== -1) {
+                        juegosTbd[index] = objetoTbd;
+                    } else {
+                        juegosTbd.push(objetoTbd);
+                    }
+                }
+            }
+
+            ocultarFormularios();
+            actualizarOpcionesFiltroAnio();
+            renderizarSegunVista();
+            await guardarEnGitHub();
+        }
+
+        // RENDERIZADO GLOBAL DE BÚSQUEDA CON BARRA VERTICAL Y TOTALES
+        function renderizarBusquedaGlobal(textoBusqueda) {
+            const contenedor = document.getElementById('vista-contenido');
+            contenedor.innerHTML = "";
+
+            const calFiltrados = juegos.map((j, i) => ({ ...j, originalIndex: i, col: 'calendario' })).filter(j => 
+                (j.titulo && j.titulo.toLowerCase().includes(textoBusqueda)) || (j.desarrollador && j.desarrollador.toLowerCase().includes(textoBusqueda))
+            );
+
+            const tbdFiltrados = juegosTbd.map((j, i) => ({ ...j, originalIndex: i, col: 'tbd' })).filter(j => 
+                (j.titulo && j.titulo.toLowerCase().includes(textoBusqueda)) || (j.desarrollador && j.desarrollador.toLowerCase().includes(textoBusqueda))
+            );
+
+            const gotyFiltrados = listaGoty.map((g, i) => ({ ...g, originalIndex: i, col: 'goty' })).filter(g => 
+                (g.titulo && g.titulo.toLowerCase().includes(textoBusqueda)) || (g.desarrollador && g.desarrollador.toLowerCase().includes(textoBusqueda))
+            );
+
+            if (calFiltrados.length === 0 && tbdFiltrados.length === 0 && gotyFiltrados.length === 0) {
+                contenedor.innerHTML = `<div class="sin-resultados">No se encontraron resultados en ninguna sección para "${textoBusqueda}".</div>`;
+                return;
+            }
+
+            if (calFiltrados.length > 0) {
+                const seccion = document.createElement('div');
+                seccion.classList.add('seccion-global-resultados');
+                seccion.innerHTML = `<h3 class="titulo-seccion-global">📅 Resultados en Calendario (${calFiltrados.length} resultado${calFiltrados.length > 1 ? 's' : ''})</h3>`;
+                const grilla = document.createElement('div');
+                grilla.classList.add('grilla-juegos');
+
+                calFiltrados.forEach(j => {
+                    const tarjeta = document.createElement('div');
+                    tarjeta.classList.add('tarjeta-juego');
+                    const estiloDisplay = (esAdmin && modoEdicionActivo) ? 'flex' : 'none';
+                    tarjeta.innerHTML = `
+                        <button class="btn-eliminar-tarjeta" style="display: ${estiloDisplay};" onclick="eliminarJuego('calendario', ${j.originalIndex}, event)">✕</button>
+                        <button class="btn-editar-tarjeta" style="display: ${(esAdmin && modoEdicionActivo) ? 'block' : 'none'};" onclick="abrirModalEditar('calendario', ${j.originalIndex})">✏️ Editar</button>
+                        <img src="img/${j.imagen}" alt="${j.titulo}">
+                        <div class="info-juego">
+                            <h3 class="titulo-lanzamiento">${j.titulo}</h3>
+                            <div>
+                                <span class="fecha">${j.fechaFormateada}</span>
+                                <span class="desarrollador-tarjeta">${j.desarrollador || ''}</span>
+                                <span class="plataformas">${j.plataformas}</span>
+                            </div>
+                        </div>
+                    `;
+                    grilla.appendChild(tarjeta);
+                });
+                seccion.appendChild(grilla);
+                contenedor.appendChild(seccion);
+            }
+
+            if (tbdFiltrados.length > 0) {
+                const seccion = document.createElement('div');
+                seccion.classList.add('seccion-global-resultados');
+                seccion.innerHTML = `<h3 class="titulo-seccion-global">⏳ Resultados en TBD (${tbdFiltrados.length} resultado${tbdFiltrados.length > 1 ? 's' : ''})</h3>`;
+                const grilla = document.createElement('div');
+                grilla.classList.add('grilla-juegos');
+
+                tbdFiltrados.forEach(j => {
+                    const tarjeta = document.createElement('div');
+                    tarjeta.classList.add('tarjeta-juego');
+                    const estiloDisplay = (esAdmin && modoEdicionActivo) ? 'flex' : 'none';
+                    tarjeta.innerHTML = `
+                        <button class="btn-eliminar-tarjeta" style="display: ${estiloDisplay};" onclick="eliminarJuego('tbd', ${j.originalIndex}, event)">✕</button>
+                        <button class="btn-editar-tarjeta" style="display: ${(esAdmin && modoEdicionActivo) ? 'block' : 'none'};" onclick="abrirModalEditar('tbd', ${j.originalIndex})">✏️ Editar</button>
+                        <img src="img/${j.imagen}" alt="${j.titulo}">
+                        <div class="info-juego">
+                            <h3 class="titulo-lanzamiento">${j.titulo}</h3>
+                            <div>
+                                <span class="fecha">TBD (${j.anio})</span>
+                                <span class="desarrollador-tarjeta">${j.desarrollador || ''}</span>
+                                <span class="plataformas">${j.plataformas}</span>
+                            </div>
+                        </div>
+                    `;
+                    grilla.appendChild(tarjeta);
+                });
+                seccion.appendChild(grilla);
+                contenedor.appendChild(seccion);
+            }
+
+            if (gotyFiltrados.length > 0) {
+                const seccion = document.createElement('div');
+                seccion.classList.add('seccion-global-resultados');
+                seccion.innerHTML = `<h3 class="titulo-seccion-global">🏆 Resultados en Salón de la Fama GOTY (${gotyFiltrados.length} resultado${gotyFiltrados.length > 1 ? 's' : ''})</h3>`;
+                const grilla = document.createElement('div');
+                grilla.classList.add('grilla-juegos');
+
+                gotyFiltrados.forEach(g => {
+                    const tarjeta = document.createElement('div');
+                    tarjeta.classList.add('tarjeta-juego');
+                    const estiloDisplay = (esAdmin && modoEdicionActivo) ? 'flex' : 'none';
+                    tarjeta.innerHTML = `
+                        <button class="btn-eliminar-tarjeta" style="display: ${estiloDisplay};" onclick="eliminarJuego('goty', ${g.originalIndex}, event)">✕</button>
+                        <button class="btn-editar-tarjeta" style="display: ${(esAdmin && modoEdicionActivo) ? 'block' : 'none'};" onclick="abrirModalEditar('goty', ${g.originalIndex})">✏️ Editar</button>
+                        <img src="img/${g.imagen}" alt="${g.titulo}">
+                        <div class="info-juego">
+                            <h3 class="titulo-lanzamiento">${g.titulo}</h3>
+                            <div>
+                                <span class="fecha">GOTY ${g.anio}</span>
+                                <span class="desarrollador-tarjeta">${g.desarrollador || ''}</span>
+                            </div>
+                        </div>
+                    `;
+                    grilla.appendChild(tarjeta);
+                });
+                seccion.appendChild(grilla);
+                contenedor.appendChild(seccion);
+            }
+        }
+
+        // RENDERIZADO DEL CALENDARIO
+        function renderizarCalendario() {
+            const contenedor = document.getElementById('vista-contenido');
+            contenedor.innerHTML = "";
+
+            const textoBusqueda = document.getElementById('input-busqueda').value.toLowerCase().trim();
+            const anioSeleccionado = document.getElementById('filtro-anio').value;
+            const plataformaSeleccionada = document.getElementById('filtro-plataforma').value;
+
+            const juegosFiltrados = juegos.map((juego, originalIndex) => ({ ...juego, originalIndex })).filter(juego => {
+                const coincideAnio = (anioSeleccionado === "todos" || juego.anio === anioSeleccionado);
+                const coincidePlataforma = (plataformaSeleccionada === "todas" || juego.plataformas.includes(plataformaSeleccionada));
+                
+                const tituloMatch = juego.titulo ? juego.titulo.toLowerCase().includes(textoBusqueda) : false;
+                const devMatch = juego.desarrollador ? juego.desarrollador.toLowerCase().includes(textoBusqueda) : false;
+                const coincideBusqueda = textoBusqueda === "" || tituloMatch || devMatch;
+
+                return coincideAnio && coincidePlataforma && coincideBusqueda;
+            });
+
+            if (juegosFiltrados.length === 0) {
+                contenedor.innerHTML = `<div class="sin-resultados">No se encontraron lanzamientos con fecha confirmada según los filtros.</div>`;
+                return;
+            }
+
+            const grupos = {};
+            juegosFiltrados.forEach(juego => {
+                const clave = `${juego.anio}-${juego.mes}`;
+                if (!grupos[clave]) {
+                    grupos[clave] = { 
+                        anio: juego.anio, 
+                        mes: juego.mes, 
+                        fechaRef: new Date(juego.fechaOrden), 
+                        items: [] 
+                    };
+                }
+                grupos[clave].items.push(juego);
+            });
+
+            const gruposOrdenados = Object.values(grupos).sort((a, b) => {
+                if (a.anio !== b.anio) {
+                    return parseInt(a.anio) - parseInt(b.anio);
+                }
+                return a.fechaRef - b.fechaRef;
+            });
+
+            gruposOrdenados.forEach(grupo => {
+                grupo.items.sort((a, b) => {
+                    const diffFechas = new Date(a.fechaOrden) - new Date(b.fechaOrden);
+                    if (diffFechas !== 0) return diffFechas;
+                    return a.titulo.localeCompare(b.titulo);
+                });
+
+                const seccionMes = document.createElement('div');
+                seccionMes.classList.add('seccion-mes');
+
+                const columnaTiempo = document.createElement('div');
+                columnaTiempo.classList.add('columna-tiempo-superior');
+                columnaTiempo.innerHTML = `
+                    <div class="caja-anio">${grupo.anio}</div>
+                    <div class="caja-mes">${grupo.mes}</div>
+                `;
+                seccionMes.appendChild(columnaTiempo);
+
+                const grillaJuegos = document.createElement('div');
+                grillaJuegos.classList.add('grilla-juegos');
+
+                grupo.items.forEach(juego => {
+                    const tarjeta = document.createElement('div');
+                    tarjeta.classList.add('tarjeta-juego');
+                    tarjeta.setAttribute('data-fecha', juego.fechaOrden);
+                    
+                    const estiloDisplayEditar = (esAdmin && modoEdicionActivo) ? 'block' : 'none';
+                    const estiloDisplayEliminar = (esAdmin && modoEdicionActivo) ? 'flex' : 'none';
+                    const devTexto = juego.desarrollador ? `<span class="desarrollador-tarjeta">${juego.desarrollador}</span>` : '';
+
+                    tarjeta.innerHTML = `
+                        <button class="btn-eliminar-tarjeta" style="display: ${estiloDisplayEliminar};" onclick="eliminarJuego('calendario', ${juego.originalIndex}, event)" title="Eliminar juego">✕</button>
+                        <button class="btn-editar-tarjeta" style="display: ${estiloDisplayEditar};" onclick="abrirModalEditar('calendario', ${juego.originalIndex})">✏️ Editar</button>
+                        <img src="img/${juego.imagen}" alt="${juego.titulo}">
+                        <div class="info-juego">
+                            <h3 class="titulo-lanzamiento">${juego.titulo}</h3>
+                            <div>
+                                <span class="fecha">${juego.fechaFormateada}</span>
+                                ${devTexto}
+                                <span class="plataformas">${juego.plataformas}</span>
+                            </div>
+                        </div>
+                    `;
+                    grillaJuegos.appendChild(tarjeta);
+                });
+
+                seccionMes.appendChild(grillaJuegos);
+                contenedor.appendChild(seccionMes);
+            });
+
+            setTimeout(posicionarEnJuegoMasProximo, 100);
+        }
+
+        // RENDERIZADO DE TBD
+        function renderizarTbd() {
+            const contenedor = document.getElementById('vista-contenido');
+            contenedor.innerHTML = "";
+
+            const textoBusqueda = document.getElementById('input-busqueda').value.toLowerCase().trim();
+            const anioSeleccionado = document.getElementById('filtro-anio').value;
+            const plataformaSeleccionada = document.getElementById('filtro-plataforma').value;
+
+            const tbdFiltrados = juegosTbd.map((juego, originalIndex) => ({ ...juego, originalIndex })).filter(juego => {
+                const coincideAnio = (anioSeleccionado === "todos" || juego.anio === anioSeleccionado);
+                const coincidePlataforma = (plataformaSeleccionada === "todas" || juego.plataformas.includes(plataformaSeleccionada));
+                
+                const tituloMatch = juego.titulo ? juego.titulo.toLowerCase().includes(textoBusqueda) : false;
+                const devMatch = juego.desarrollador ? juego.desarrollador.toLowerCase().includes(textoBusqueda) : false;
+                const coincideBusqueda = textoBusqueda === "" || tituloMatch || devMatch;
+
+                return coincideAnio && coincidePlataforma && coincideBusqueda;
+            });
+
+            if (tbdFiltrados.length === 0) {
+                contenedor.innerHTML = `<div class="sin-resultados">No hay juegos pendientes o TBD que coincidan con los filtros.</div>`;
+                return;
+            }
+
+            const grupos = {};
+            tbdFiltrados.forEach(juego => {
+                const clave = juego.anio || "Por Anunciar";
+                if (!grupos[clave]) {
+                    grupos[clave] = { anio: clave, items: [] };
+                }
+                grupos[clave].items.push(juego);
+            });
+
+            const gruposOrdenados = Object.values(grupos).sort((a, b) => {
+                if (a.anio === "TBD" || a.anio === "Por Anunciar") return 1;
+                if (b.anio === "TBD" || b.anio === "Por Anunciar") return -1;
+                return parseInt(a.anio) - parseInt(b.anio);
+            });
+
+            gruposOrdenados.forEach(grupo => {
+                grupo.items.sort((a, b) => a.titulo.localeCompare(b.titulo));
+
+                const seccionMes = document.createElement('div');
+                seccionMes.classList.add('seccion-mes');
+
+                const columnaTiempo = document.createElement('div');
+                columnaTiempo.classList.add('columna-tiempo-superior');
+                columnaTiempo.innerHTML = `
+                    <div class="caja-anio">Año Estimado: ${grupo.anio}</div>
+                    <div class="caja-mes">Fecha Exacta Pendiente (TBD)</div>
+                `;
+                seccionMes.appendChild(columnaTiempo);
+
+                const grillaJuegos = document.createElement('div');
+                grillaJuegos.classList.add('grilla-juegos');
+
+                grupo.items.forEach(juego => {
+                    const tarjeta = document.createElement('div');
+                    tarjeta.classList.add('tarjeta-juego');
+                    
+                    const estiloDisplayEditar = (esAdmin && modoEdicionActivo) ? 'block' : 'none';
+                    const estiloDisplayEliminar = (esAdmin && modoEdicionActivo) ? 'flex' : 'none';
+                    const devTexto = juego.desarrollador ? `<span class="desarrollador-tarjeta">${juego.desarrollador}</span>` : '';
+
+                    tarjeta.innerHTML = `
+                        <button class="btn-eliminar-tarjeta" style="display: ${estiloDisplayEliminar};" onclick="eliminarJuego('tbd', ${juego.originalIndex}, event)" title="Eliminar juego">✕</button>
+                        <button class="btn-editar-tarjeta" style="display: ${estiloDisplayEditar};" onclick="abrirModalEditar('tbd', ${juego.originalIndex})">✏️ Editar / Asignar Fecha</button>
+                        <img src="img/${juego.imagen}" alt="${juego.titulo}">
+                        <div class="info-juego">
+                            <h3 class="titulo-lanzamiento">${juego.titulo}</h3>
+                            <div>
+                                <span class="fecha">TBD (${juego.anio})</span>
+                                ${devTexto}
+                                <span class="plataformas">${juego.plataformas}</span>
+                            </div>
+                        </div>
+                    `;
+                    grillaJuegos.appendChild(tarjeta);
+                });
+
+                seccionMes.appendChild(grillaJuegos);
+                contenedor.appendChild(seccionMes);
+            });
+        }
+
+        // RENDERIZADO GOTY PREMIUM
+        function renderizarGoty() {
+            const contenedor = document.getElementById('vista-contenido');
+            contenedor.innerHTML = "";
+
+            const gotyConIndices = listaGoty.map((goty, originalIndex) => ({ ...goty, originalIndex }));
+            gotyConIndices.sort((a, b) => parseInt(b.anio) - parseInt(a.anio));
+
+            const seccionGoty = document.createElement('div');
+            seccionGoty.classList.add('seccion-goty-container');
+            
+            seccionGoty.innerHTML = `<h2 class="goty-titulo-seccion">🏆 Salón de la Fama GOTY</h2>`;
+
+            const grillaGoty = document.createElement('div');
+            grillaGoty.classList.add('grilla-goty');
+
+            gotyConIndices.forEach(goty => {
+                const tarjeta = document.createElement('div');
+                tarjeta.classList.add('tarjeta-goty-premium');
+                
+                const estiloDisplayEditar = (esAdmin && modoEdicionActivo) ? 'block' : 'none';
+                const estiloDisplayEliminar = (esAdmin && modoEdicionActivo) ? 'flex' : 'none';
+
+                tarjeta.innerHTML = `
+                    <button class="btn-eliminar-tarjeta" style="display: ${estiloDisplayEliminar};" onclick="eliminarJuego('goty', ${goty.originalIndex}, event)" title="Eliminar juego">✕</button>
+                    <button class="btn-editar-tarjeta" style="display: ${estiloDisplayEditar};" onclick="abrirModalEditar('goty', ${goty.originalIndex})">✏️ Editar</button>
+                    <div class="goty-badge-corona">👑 GOTY</div>
+                    <img src="img/${goty.imagen}" alt="${goty.titulo}">
+                    <div class="info-goty-premium">
+                        <h3 class="titulo-goty">${goty.titulo}</h3>
+                        <div>
+                            <span class="etiqueta-anio-goty">Año ${goty.anio}</span>
+                            <span class="desarrollador-goty">${goty.desarrollador}</span>
+                        </div>
+                    </div>
+                `;
+                grillaGoty.appendChild(tarjeta);
+            });
+
+            seccionGoty.appendChild(grillaGoty);
+            contenedor.appendChild(seccionGoty);
+        }
+
+        inicializarTema();
+        actualizarInterfazAdmin();
+        cargarDatosGitHub();
+    </script>
+
+</body>
+</html>
