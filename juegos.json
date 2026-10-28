@@ -987,6 +987,16 @@
       "plataformas": "PlayStation 3, Xbox 360",
       "desarrollador": "Capcom",
       "imagen": "resident evil 5.jpg"
+    },
+    {
+      "titulo": "Resident Evil 6",
+      "anio": "2013",
+      "mes": "Marzo",
+      "fechaOrden": "2013-03-22",
+      "fechaFormateada": "22/03/2013",
+      "plataformas": "Steam",
+      "desarrollador": "Capcom",
+      "imagen": "resident evil 6.jpg"
     }
   ],
   "tbd": [
