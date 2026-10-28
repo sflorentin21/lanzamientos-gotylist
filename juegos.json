@@ -1047,6 +1047,16 @@
       "plataformas": "PlayStation 2",
       "desarrollador": "Capcom",
       "imagen": "monster hunter g.png"
+    },
+    {
+      "titulo": "Monster Hunter 2",
+      "anio": "2006",
+      "mes": "Febrero",
+      "fechaOrden": "2006-02-16",
+      "fechaFormateada": "16/02/2006",
+      "plataformas": "PlayStation 2",
+      "desarrollador": "Capcom",
+      "imagen": "monster hunter 2.jpg"
     }
   ],
   "tbd": [
