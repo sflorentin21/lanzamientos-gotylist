@@ -957,6 +957,16 @@
       "plataformas": "PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, Steam",
       "desarrollador": "Capcom",
       "imagen": "resident evil village.jpg"
+    },
+    {
+      "titulo": "Resident Evil 7: Biohazard",
+      "anio": "2017",
+      "mes": "Enero",
+      "fechaOrden": "2017-01-24",
+      "fechaFormateada": "24/01/2017",
+      "plataformas": "PlayStation 4, Xbox One, Steam",
+      "desarrollador": "Capcom",
+      "imagen": "resident evil 7.jpg"
     }
   ],
   "tbd": [
