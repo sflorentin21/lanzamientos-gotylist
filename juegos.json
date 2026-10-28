@@ -967,6 +967,16 @@
       "plataformas": "PlayStation 4, Xbox One, Steam",
       "desarrollador": "Capcom",
       "imagen": "resident evil 7.jpg"
+    },
+    {
+      "titulo": "Resident Evil 4",
+      "anio": "2005",
+      "mes": "Octubre",
+      "fechaOrden": "2005-10-25",
+      "fechaFormateada": "25/10/2005",
+      "plataformas": "PlayStation 2",
+      "desarrollador": "Capcom",
+      "imagen": "re4 2005 alt.avif"
     }
   ],
   "tbd": [
