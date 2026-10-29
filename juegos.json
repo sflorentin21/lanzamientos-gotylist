@@ -1145,6 +1145,14 @@
       "plataformas": "Nintendo Switch",
       "desarrollador": "",
       "imagen": "kitsune.jpg"
+    },
+    {
+      "titulo": "The Duskbloods",
+      "anio": "2027",
+      "fechaFormateada": "Por Anunciar",
+      "plataformas": "Nintendo Switch 2",
+      "desarrollador": "FromSoftware",
+      "imagen": "the duskbloods.jpg"
     }
   ],
   "goty": [
