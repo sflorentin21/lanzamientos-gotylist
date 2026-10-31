@@ -887,6 +887,16 @@
       "plataformas": "Nintendo Switch, PlayStation 5, Xbox Series X/S, Steam",
       "desarrollador": "Halberd Studios",
       "imagen": "mariachi legends.png"
+    },
+    {
+      "titulo": "He-Man and the Masters of the Universe: Dragon Pearl of Destruction",
+      "anio": "2027",
+      "mes": "Febrero",
+      "fechaOrden": "2027-02-04",
+      "fechaFormateada": "04/02/2027",
+      "plataformas": "Steam, Nintendo Switch",
+      "desarrollador": "Bitmap Bureau",
+      "imagen": "he-man-and-the-masters-of-the-universe-dragon-pearl-of-destruction.avif"
     }
   ],
   "tbd": [
