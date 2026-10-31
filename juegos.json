@@ -897,6 +897,16 @@
       "plataformas": "Steam, Nintendo Switch",
       "desarrollador": "Bitmap Bureau",
       "imagen": "he-man-and-the-masters-of-the-universe-dragon-pearl-of-destruction.avif"
+    },
+    {
+      "titulo": "MARVEL Cosmic Invasion: The Siege of Castle Doom",
+      "anio": "2026",
+      "mes": "Noviembre",
+      "fechaOrden": "2026-11-10",
+      "fechaFormateada": "10/11/2026",
+      "plataformas": "Steam, Nintendo Switch",
+      "desarrollador": "Dotemu",
+      "imagen": "MARVEL Cosmic Invasion The Siege of Castle Doom.jpg"
     }
   ],
   "tbd": [
