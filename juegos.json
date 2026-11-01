@@ -907,6 +907,16 @@
       "plataformas": "Steam, Nintendo Switch",
       "desarrollador": "Dotemu",
       "imagen": "MARVEL Cosmic Invasion The Siege of Castle Doom.jpg"
+    },
+    {
+      "titulo": "Lost and Found Co.",
+      "anio": "2026",
+      "mes": "Marzo",
+      "fechaOrden": "2026-03-06",
+      "fechaFormateada": "06/03/2026",
+      "plataformas": "Steam",
+      "desarrollador": "Bit Egg Inc.",
+      "imagen": "lost-and-found-co.png"
     }
   ],
   "tbd": [
