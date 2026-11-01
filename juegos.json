@@ -918,6 +918,16 @@
       "plataformas": "Steam",
       "desarrollador": "Bit Egg Inc.",
       "imagen": "lost-and-found-co.png"
+    },
+    {
+      "titulo": "Edge of Memories",
+      "anio": "2026",
+      "mes": "Diciembre",
+      "fechaOrden": "2026-12-03",
+      "fechaFormateada": "03/12/2026",
+      "plataformas": "PlayStation 5, Xbox Series X|S, Steam",
+      "desarrollador": "Midgar Studio",
+      "imagen": "edge-of-memories.png"
     }
   ],
   "tbd": [
