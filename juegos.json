@@ -992,6 +992,16 @@
       "plataformas": "Steam, Nintendo Switch",
       "desarrollador": "Sabotage Studio",
       "imagen": "the-messenger.avif"
+    },
+    {
+      "titulo": "Sea of Stars",
+      "anio": "2023",
+      "mes": "Agosto",
+      "fechaOrden": "2023-08-29",
+      "fechaFormateada": "29/08/2023",
+      "plataformas": "Nintendo Switch, PlayStation 4, PlayStation 5, Windows, Xbox One, and Xbox Series X/S, Steam",
+      "desarrollador": "Sabotage Studio",
+      "imagen": "sea-of-stars.avif"
     }
   ],
   "tbd": [
