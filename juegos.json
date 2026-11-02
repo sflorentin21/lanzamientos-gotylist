@@ -972,6 +972,16 @@
       "plataformas": "Steam, Nintendo Switch, Nintendo Switch 2, PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S",
       "desarrollador": "Team Cherry",
       "imagen": "hollow-knight-silksong.avif"
+    },
+    {
+      "titulo": "Hollow Knight",
+      "anio": "2017",
+      "mes": "Febrero",
+      "fechaOrden": "2017-02-24",
+      "fechaFormateada": "24/02/2017",
+      "plataformas": "Steam",
+      "desarrollador": "Team Cherry",
+      "imagen": "hollow-knight.avif"
     }
   ],
   "tbd": [
