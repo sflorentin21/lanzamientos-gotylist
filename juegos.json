@@ -1042,6 +1042,16 @@
       "plataformas": "Nintendo Switch",
       "desarrollador": "Nintendo",
       "imagen": "zelda-tears-of-the-kingdom.avif"
+    },
+    {
+      "titulo": "Metroid Dread",
+      "anio": "2021",
+      "mes": "Octubre",
+      "fechaOrden": "2021-10-08",
+      "fechaFormateada": "08/10/2021",
+      "plataformas": "Nintendo Switch",
+      "desarrollador": "Nintendo",
+      "imagen": "metroid-dread.avif"
     }
   ],
   "tbd": [
