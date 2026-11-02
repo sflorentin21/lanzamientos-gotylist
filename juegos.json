@@ -952,6 +952,16 @@
       "plataformas": "Steam, PlayStation 5",
       "desarrollador": "AdHoc Studio",
       "imagen": "dispatch.avif"
+    },
+    {
+      "titulo": "Shovel Knight: Treasure Trove",
+      "anio": "2017",
+      "mes": "Marzo",
+      "fechaOrden": "2017-03-03",
+      "fechaFormateada": "03/03/2017",
+      "plataformas": "Nintendo Switch",
+      "desarrollador": "Yacht Club Games",
+      "imagen": "sholve-knight-treasure-trove.avif"
     }
   ],
   "tbd": [
