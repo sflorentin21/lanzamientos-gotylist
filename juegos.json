@@ -962,6 +962,16 @@
       "plataformas": "Nintendo Switch",
       "desarrollador": "Yacht Club Games",
       "imagen": "sholve-knight-treasure-trove.avif"
+    },
+    {
+      "titulo": "Hollow Knight: Silksong",
+      "anio": "2025",
+      "mes": "Septiembre",
+      "fechaOrden": "2025-09-04",
+      "fechaFormateada": "04/09/2025",
+      "plataformas": "Steam, Nintendo Switch, Nintendo Switch 2, PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S",
+      "desarrollador": "Team Cherry",
+      "imagen": "hollow-knight-silksong.avif"
     }
   ],
   "tbd": [
