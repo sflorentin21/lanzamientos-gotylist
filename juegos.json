@@ -1032,6 +1032,16 @@
       "plataformas": "Nintendo Switch, Steam, PlayStation 4, PlayStation 5",
       "desarrollador": "Mechanical Head Studios",
       "imagen": "cyber-shadow.jpg"
+    },
+    {
+      "titulo": "The Legend of Zelda: Tears of the Kingdom",
+      "anio": "2023",
+      "mes": "Mayo",
+      "fechaOrden": "2023-05-12",
+      "fechaFormateada": "12/05/2023",
+      "plataformas": "Nintendo Switch",
+      "desarrollador": "Nintendo",
+      "imagen": "zelda-tears-of-the-kingdom.avif"
     }
   ],
   "tbd": [
