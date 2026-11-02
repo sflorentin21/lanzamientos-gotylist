@@ -1022,6 +1022,16 @@
       "plataformas": "Nintendo Switch",
       "desarrollador": "Super Evil Megacorp",
       "imagen": "teenage-mutant-ninja-turtles-splintered-fate.avif"
+    },
+    {
+      "titulo": "Cyber Shadow",
+      "anio": "2021",
+      "mes": "Enero",
+      "fechaOrden": "2021-01-26",
+      "fechaFormateada": "26/01/2021",
+      "plataformas": "Nintendo Switch, Steam, PlayStation 4, PlayStation 5",
+      "desarrollador": "Mechanical Head Studios",
+      "imagen": "cyber-shadow.jpg"
     }
   ],
   "tbd": [
