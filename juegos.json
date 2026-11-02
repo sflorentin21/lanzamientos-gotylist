@@ -1054,6 +1054,17 @@
       "plataformas": "Nintendo Switch",
       "desarrollador": "Nintendo",
       "imagen": "metroid-dread.avif"
+    },
+    {
+      "titulo": "Absolum",
+      "anio": "2025",
+      "mes": "Octubre",
+      "fechaOrden": "2025-10-09",
+      "fechaFormateada": "09/10/2025",
+      "plataformas": "Steam",
+      "desarrollador": "Guard Crush Games, Supamonks, Dotemu",
+      "distribuidor": "Dotemu, Arc System Works (JP)",
+      "imagen": "absolum.avif"
     }
   ],
   "tbd": [
