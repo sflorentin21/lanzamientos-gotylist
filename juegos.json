@@ -1002,6 +1002,16 @@
       "plataformas": "Nintendo Switch, PlayStation 4, PlayStation 5, Windows, Xbox One, and Xbox Series X/S, Steam",
       "desarrollador": "Sabotage Studio",
       "imagen": "sea-of-stars.avif"
+    },
+    {
+      "titulo": "Teenage Mutant Ninja Turtles: Shredder's Revenge",
+      "anio": "2022",
+      "mes": "Junio",
+      "fechaOrden": "2022-06-16",
+      "fechaFormateada": "16/06/2022",
+      "plataformas": "Steam, Nintendo Switch, PlayStation 4, Xbox One",
+      "desarrollador": "Tribute Games",
+      "imagen": "teenage-mutant-ninja-turtles-shredders-revenge.avif"
     }
   ],
   "tbd": [
