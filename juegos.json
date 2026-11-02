@@ -1012,6 +1012,16 @@
       "plataformas": "Steam, Nintendo Switch, PlayStation 4, Xbox One",
       "desarrollador": "Tribute Games",
       "imagen": "teenage-mutant-ninja-turtles-shredders-revenge.avif"
+    },
+    {
+      "titulo": "Teenage Mutant Ninja Turtles: Splintered Fate",
+      "anio": "2024",
+      "mes": "Julio",
+      "fechaOrden": "2024-07-17",
+      "fechaFormateada": "17/07/2024",
+      "plataformas": "Nintendo Switch",
+      "desarrollador": "Super Evil Megacorp",
+      "imagen": "teenage-mutant-ninja-turtles-splintered-fate.avif"
     }
   ],
   "tbd": [
