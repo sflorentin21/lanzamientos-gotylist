@@ -942,6 +942,16 @@
       "plataformas": "Steam, Nintendo Switch, Nintendo Switch 2, PlayStation 5, Xbox One, Xbox Series X/S",
       "desarrollador": "Chucklefish, Robotality",
       "imagen": "witchbrook.jpg"
+    },
+    {
+      "titulo": "Dispatch",
+      "anio": "2025",
+      "mes": "Octubre",
+      "fechaOrden": "2025-10-22",
+      "fechaFormateada": "22/10/2025",
+      "plataformas": "Steam, PlayStation 5",
+      "desarrollador": "AdHoc Studio",
+      "imagen": "dispatch.avif"
     }
   ],
   "tbd": [
