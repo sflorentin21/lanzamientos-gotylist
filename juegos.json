@@ -1123,6 +1123,17 @@
       "desarrollador": "Tribute Games",
       "distribuidor": "Dotemu",
       "imagen": "teenage-mutant-ninja-turtles-shredders-revenge---dimension-shellshock.jpg"
+    },
+    {
+      "titulo": "NINJA GAIDEN: Ragebound",
+      "anio": "2025",
+      "mes": "Julio",
+      "fechaOrden": "2025-07-31",
+      "fechaFormateada": "31/07/2025",
+      "plataformas": "Steam, Nintendo Switch, Nintendo Switch 2, PlayStation 5, Xbox One, Xbox Series X/S",
+      "desarrollador": "The Game Kitchen",
+      "distribuidor": "Dotemu",
+      "imagen": "ninja-gaiden-ragebound.avif"
     }
   ],
   "tbd": [
