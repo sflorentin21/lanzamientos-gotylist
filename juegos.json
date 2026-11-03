@@ -1145,6 +1145,17 @@
       "desarrollador": "Tribute Games",
       "distribuidor": "Dotemu",
       "imagen": "teenage-mutant-ninja-turtles-shredders-revenge---radical-reptiles.png"
+    },
+    {
+      "titulo": "Blasphemous 2",
+      "anio": "2023",
+      "mes": "Agosto",
+      "fechaOrden": "2023-08-24",
+      "fechaFormateada": "24/08/2023",
+      "plataformas": "Steam, Nintendo Switch, Nintendo Switch 2, PlayStation 5, Xbox One, Xbox Series X/S",
+      "desarrollador": "The Game Kitchen",
+      "distribuidor": "Team17",
+      "imagen": "blasphemous-2.avif"
     }
   ],
   "tbd": [
@@ -1445,15 +1456,6 @@
       "desarrollador": "Old Skull Games",
       "distribuidor": "Dotemu",
       "imagen": "warhammer-age-of-sigmar-deathmaster.jpg"
-    },
-    {
-      "titulo": "Blasphemous 2",
-      "anio": "TBD",
-      "fechaFormateada": "Por Anunciar",
-      "plataformas": "Steam, Nintendo Switch, Nintendo Switch 2, PlayStation 5, Xbox One, Xbox Series X/S",
-      "desarrollador": "The Game Kitchen",
-      "distribuidor": "Team17",
-      "imagen": "blasphemous-2.avif"
     }
   ],
   "goty": [
