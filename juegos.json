@@ -1178,6 +1178,17 @@
       "desarrollador": "Gearbox Software",
       "distribuidor": "2K Games",
       "imagen": "borderlands-4.jpg"
+    },
+    {
+      "titulo": "Qliphah in Providence's Shadow",
+      "anio": "2026",
+      "mes": "Septiembre",
+      "fechaOrden": "2026-09-24",
+      "fechaFormateada": "24/09/2026",
+      "plataformas": "PlayStation 5, Nintendo Switch, Steam",
+      "desarrollador": "Arc System Works, UnitePlus",
+      "distribuidor": "Arc System Works",
+      "imagen": "qliphah-in-providences-shadow.avif"
     }
   ],
   "tbd": [
