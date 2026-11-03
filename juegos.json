@@ -1077,6 +1077,17 @@
       "desarrollador": "CD Projekt Red",
       "distribuidor": "CD Projekt",
       "imagen": "witcher-blood-and-wine.avif"
+    },
+    {
+      "titulo": "The Witcher 3: Wild Hunt – Hearts of Stone",
+      "anio": "2015",
+      "mes": "Octubre",
+      "fechaOrden": "2015-10-13",
+      "fechaFormateada": "13/10/2015",
+      "plataformas": "Steam, PlayStation 4, Xbox One",
+      "desarrollador": "CD Projekt Red",
+      "distribuidor": "CD Projekt",
+      "imagen": "the-witcher-hearts-of-stone.avif"
     }
   ],
   "tbd": [
