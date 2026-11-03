@@ -1424,6 +1424,15 @@
       "plataformas": "Nintendo Switch 2",
       "desarrollador": "Nintendo",
       "imagen": "default.jpg"
+    },
+    {
+      "titulo": "Warhammer Age of Sigmar: Deathmaster",
+      "anio": "2027",
+      "fechaFormateada": "Por Anunciar",
+      "plataformas": "Steam",
+      "desarrollador": "Old Skull Games",
+      "distribuidor": "Dotemu",
+      "imagen": "default.jpg"
     }
   ],
   "goty": [
