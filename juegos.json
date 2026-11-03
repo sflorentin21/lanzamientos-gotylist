@@ -1156,6 +1156,17 @@
       "desarrollador": "The Game Kitchen",
       "distribuidor": "Team17",
       "imagen": "blasphemous-2.avif"
+    },
+    {
+      "titulo": "S.T.A.L.K.E.R. 2: Cost of Hope",
+      "anio": "2026",
+      "mes": "Agosto",
+      "fechaOrden": "2026-08-20",
+      "fechaFormateada": "20/08/2026",
+      "plataformas": "Steam, PlayStation 5, and Xbox Series X|S",
+      "desarrollador": "GSC Game World",
+      "distribuidor": "GSC Game World",
+      "imagen": "stalker-2-cost-of-hope.avif"
     }
   ],
   "tbd": [
