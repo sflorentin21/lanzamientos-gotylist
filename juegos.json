@@ -1090,6 +1090,17 @@
       "desarrollador": "CD Projekt Red",
       "distribuidor": "CD Projekt",
       "imagen": "the-witcher-hearts-of-stone.avif"
+    },
+    {
+      "titulo": "Panzer Paladin",
+      "anio": "2020",
+      "mes": "Julio",
+      "fechaOrden": "2020-07-21",
+      "fechaFormateada": "21/07/2020",
+      "plataformas": "Nintendo Switch, Steam, PlayStation 4, Xbox One",
+      "desarrollador": "Tribute Games",
+      "distribuidor": "Tribute Games",
+      "imagen": "panzer-paladin.avif"
     }
   ],
   "tbd": [
