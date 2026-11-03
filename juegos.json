@@ -1101,6 +1101,17 @@
       "desarrollador": "Tribute Games",
       "distribuidor": "Tribute Games",
       "imagen": "panzer-paladin.avif"
+    },
+    {
+      "titulo": "Scott Pilgrim EX",
+      "anio": "2026",
+      "mes": "Marzo",
+      "fechaOrden": "2026-03-03",
+      "fechaFormateada": "03/03/2026",
+      "plataformas": "Steam, Nintendo Switch, Nintendo Switch 2, • PlayStation 5, Xbox One, Xbox Series X/S",
+      "desarrollador": "Tribute Games",
+      "distribuidor": "Tribute Games",
+      "imagen": "scott-pilgrim-ex.avif"
     }
   ],
   "tbd": [
