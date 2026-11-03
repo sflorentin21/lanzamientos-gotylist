@@ -1066,6 +1066,17 @@
       "desarrollador": "Guard Crush Games, Supamonks, Dotemu",
       "distribuidor": "Dotemu, Arc System Works (JP)",
       "imagen": "absolum.avif"
+    },
+    {
+      "titulo": "The Witcher 3: Wild Hunt – Blood and Wine",
+      "anio": "2016",
+      "mes": "Mayo",
+      "fechaOrden": "2016-05-31",
+      "fechaFormateada": "31/05/2016",
+      "plataformas": "Steam, PlayStation 4, Xbox One",
+      "desarrollador": "CD Projekt Red",
+      "distribuidor": "CD Projekt",
+      "imagen": "witcher-blood-and-wine.avif"
     }
   ],
   "tbd": [
