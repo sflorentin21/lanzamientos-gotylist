@@ -1222,6 +1222,17 @@
       "desarrollador": "Square Enix, xeen Inc.",
       "distribuidor": "Square Enix",
       "imagen": "romancing-saga-3.png"
+    },
+    {
+      "titulo": "Warhammer 40,000: Dark Heresy",
+      "anio": "2027",
+      "mes": "Enero",
+      "fechaOrden": "2027-01-07",
+      "fechaFormateada": "07/01/2027",
+      "plataformas": "Steam, PlayStation 5, and Xbox Series X|S",
+      "desarrollador": "Owlcat Games",
+      "distribuidor": "Owlcat Games",
+      "imagen": "warhammer40k-dark-heresy.jpg"
     }
   ],
   "tbd": [
