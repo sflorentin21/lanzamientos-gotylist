@@ -1233,6 +1233,17 @@
       "desarrollador": "Owlcat Games",
       "distribuidor": "Owlcat Games",
       "imagen": "warhammer40k-dark-heresy.jpg"
+    },
+    {
+      "titulo": "Starship Troopers: Ultimate Bug War!",
+      "anio": "2026",
+      "mes": "Marzo",
+      "fechaOrden": "2026-03-16",
+      "fechaFormateada": "16/03/2026",
+      "plataformas": "Steam, PlayStation 5, Xbox Series X/S, Nintendo Switch 2",
+      "desarrollador": "Auroch Digital",
+      "distribuidor": "Dotemu",
+      "imagen": "starship-troopers-ultimate-bug-war.avif"
     }
   ],
   "tbd": [
