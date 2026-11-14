@@ -1244,6 +1244,17 @@
       "desarrollador": "Auroch Digital",
       "distribuidor": "Dotemu",
       "imagen": "starship-troopers-ultimate-bug-war.avif"
+    },
+    {
+      "titulo": "Warhammer 40,000: Boltgun",
+      "anio": "2023",
+      "mes": "Mayo",
+      "fechaOrden": "2023-05-23",
+      "fechaFormateada": "23/05/2023",
+      "plataformas": "Steam, PS4, PS5, Xbox One, Xbox Series X/S, Nintendo Switch",
+      "desarrollador": "Auroch Digital",
+      "distribuidor": "Focus Entertainment",
+      "imagen": "warhammer-40k-boltgun.avif"
     }
   ],
   "tbd": [
