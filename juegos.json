@@ -1256,6 +1256,17 @@
       "desarrollador": "Auroch Digital",
       "distribuidor": "Focus Entertainment",
       "imagen": "warhammer-40k-boltgun.avif"
+    },
+    {
+      "titulo": "Crimson Desert",
+      "anio": "2026",
+      "mes": "Marzo",
+      "fechaOrden": "2026-03-19",
+      "fechaFormateada": "19/03/2026",
+      "plataformas": "Steam; Xbox Series X|S, PlayStation 5",
+      "desarrollador": "Pearl Abyss",
+      "distribuidor": "Pearl Abyss",
+      "imagen": "crimson-desert.avif"
     }
   ],
   "tbd": [
