@@ -1267,6 +1267,17 @@
       "desarrollador": "Obsidian Entertainment",
       "distribuidor": "Xbox Game Studios",
       "imagen": "xbox_tow-expansion_keyart_horizontal-3ff701b040bc3de8c709-1600x900-(1).jpg"
+    },
+    {
+      "titulo": "Sonic Racing: CrossWorlds",
+      "anio": "2025",
+      "mes": "Septiembre",
+      "fechaOrden": "2025-09-25",
+      "fechaFormateada": "25/09/2025",
+      "plataformas": "Steam, Nintendo Switch, PlayStation 4, Xbox One",
+      "desarrollador": "Sonic Team",
+      "distribuidor": "Sega",
+      "imagen": "sonic-racing-crossworlds.jpg"
     }
   ],
   "tbd": [
