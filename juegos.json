@@ -1256,6 +1256,17 @@
       "desarrollador": "Pearl Abyss",
       "distribuidor": "Pearl Abyss",
       "imagen": "crimson-desert.avif"
+    },
+    {
+      "titulo": "The Outer Worlds 2: Side Effects Guaranteed",
+      "anio": "2026",
+      "mes": "Diciembre",
+      "fechaOrden": "2026-12-02",
+      "fechaFormateada": "02/12/2026",
+      "plataformas": "Steam",
+      "desarrollador": "Obsidian Entertainment",
+      "distribuidor": "Xbox Game Studios",
+      "imagen": "default.jpg"
     }
   ],
   "tbd": [
