@@ -1290,6 +1290,17 @@
       "desarrollador": "Freshly Baked Games LLC",
       "distribuidor": "Future Friends Games",
       "imagen": "queens-domain.avif"
+    },
+    {
+      "titulo": "Hollow Knight: Silksong – Sea of Sorrow",
+      "anio": "2026",
+      "mes": "Diciembre",
+      "fechaOrden": "2026-12-11",
+      "fechaFormateada": "11/12/2026",
+      "plataformas": "Steam",
+      "desarrollador": "Team Cherry",
+      "distribuidor": "Team Cherry",
+      "imagen": "default.jpg"
     }
   ],
   "tbd": [
