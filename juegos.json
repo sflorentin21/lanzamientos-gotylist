@@ -1301,6 +1301,17 @@
       "desarrollador": "Team Cherry",
       "distribuidor": "Team Cherry",
       "imagen": "silksong-sea-of-sorrow.jpeg"
+    },
+    {
+      "titulo": "Professor Layton and the New World of Steam",
+      "anio": "2026",
+      "mes": "Diciembre",
+      "fechaOrden": "2026-12-10",
+      "fechaFormateada": "10/12/2026",
+      "plataformas": "Steam, Nintendo Switch",
+      "desarrollador": "Level-5",
+      "distribuidor": "Level-5",
+      "imagen": "professor-layton-and-the-new-world-of-steam.avif"
     }
   ],
   "tbd": [
