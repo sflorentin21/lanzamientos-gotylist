@@ -1279,6 +1279,17 @@
       "desarrollador": "Sonic Team",
       "distribuidor": "Sega",
       "imagen": "sonic-racing-crossworlds.jpg"
+    },
+    {
+      "titulo": "Queen's Domain",
+      "anio": "2026",
+      "mes": "Octubre",
+      "fechaOrden": "2026-10-30",
+      "fechaFormateada": "30/10/2026",
+      "plataformas": "Steam",
+      "desarrollador": "Freshly Baked Games LLC",
+      "distribuidor": "Future Friends Games",
+      "imagen": "queens-domain.avif"
     }
   ],
   "tbd": [
